@@ -1,0 +1,63 @@
+@media only screen and (max-width: 800.0px){
+
+  body{
+    background-image: none;
+    background-color: rgba(20, 27, 41, 1);
+  }
+
+  .both-sides-login {
+    background-color: rgba(255, 0, 0, 0.5);
+      display: table;
+  }
+
+  .container{
+    height: auto;
+    width: auto;
+  }
+
+  .left-side{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200.0px){
+
+body{
+  background-image: none;
+  background-color: rgba(20, 27, 41, 1);
+}
+
+.both-sides-login {
+  background-color: rgba(0, 255, 0, 0.5);
+    display: table;
+}
+
+.container{
+  height: auto;
+  width: auto;
+}
+
+.left-side{
+  display: none;
+}
+
+.register-text{
+  display: flex;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 17.0px;
+  font-weight: 400;
+}
+
+.register-text a{
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(192, 247, 183, 1);
+  font-weight: 600;
+}
+
+.register-text a:hover{
+  opacity: 0.8;
+}
+
+}

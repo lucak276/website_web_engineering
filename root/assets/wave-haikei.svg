@@ -1,0 +1,22 @@
+<svg id="visual"
+  viewBox="0 0 900 600"
+  width="900"
+  height="600"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1">
+
+<rect x="0"
+  y="0"
+  width="900"
+  height="600"
+  fill="#141B29">
+</rect>
+
+<path d="M515 0L485.5 33.3C456 66.7 397 133.3 394.2 200C391.3 266.7 444.7 333.3 438.3 400C432 466.7 366 533.3 333 566.7L300 600L0 600L0 566.7C0 533.3 0 466.7 0 400C0 333.3 0 266.7 0 200C0 133.3 0 66.7 0 33.3L0 0Z"
+  fill="#C0F7B7"
+  stroke-linecap="round"
+  stroke-linejoin="miter">
+</path>
+
+</svg>

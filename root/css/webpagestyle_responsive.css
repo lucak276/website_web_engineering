@@ -1,0 +1,21 @@
+@media screen and (max-width: 600px){
+    .teams{
+      max-width: 100%;
+    }
+    .teams img{
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000.0px){
+
+  .container{
+    height: 50vh;
+  }
+
+  .both-sides{
+    display: table;
+  }
+}
