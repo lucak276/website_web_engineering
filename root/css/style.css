@@ -9,26 +9,26 @@
 /* Textstyling */
 
 h1{
-  font-size: 60.0px;
-  line-height: 80.0px;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
   font-weight: bold;
 }
 
 h2{
-  font-size: 40.0px;
-  line-height: 50.0px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: bold;
 }
 
 h3{
-  font-size: 20.0px;
-  line-height: 30.0px;
+  font-size: 1.2rem;
+  line-height: 2rem;
   font-weight: bold;
 }
 
 p{
-  line-height: 35.0px;
-  font-size: 20.0px;
+  line-height: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -212,10 +212,6 @@ form{
   align-items: center;
   text-align: center;
   justify-content: center;
-}
-
-.align-right {
-
 }
 
 
