@@ -2,7 +2,9 @@
 <html lang="de">
 <head>
   <title>Preferences</title>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link rel="favicon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel='stylesheet' type='text/css'
     href="../css/preferencesStylepage.css">
@@ -35,7 +37,7 @@
         <div class="pContainer">
         <div class="CointainerC glass content">
           <h1>Choose<span> your</span> Preferences</h1>
-          <div class="discoverlist">
+          <div id=discoverlist">
             <div class="preferenceContainer">
               <button class="prefBtn" id="Python" type="submit">Python</button>
             </div>
@@ -84,12 +86,12 @@
             <div class="preferenceContainer">
             <button class="prefBtn" type="submit">Graphic Design</button>
             </div>
-            <div class="preferenceContainer">
-            <button class="prefBtn" type="submit">Ok</button>
-            </div>
+          </div>
+          <div class="preferenceContainer">
+          <button id="prefSubmit">Abschicken</button>
           </div>
         </div>
-
+          </div>
         </div>
     </main>
   <footer>

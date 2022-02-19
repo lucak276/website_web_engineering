@@ -32,4 +32,8 @@ for (let i=0; i <hdrs.length; i++)
         this.className += "active";
     });
 
+let prefcont = document.getElementById("discoverlist")
+let prefs = document.getElementsByClassName("prefBtn")
 
+for ( let i=0; i <prefs.length; i++)
+    prefs[i].addEventListener(focus())
