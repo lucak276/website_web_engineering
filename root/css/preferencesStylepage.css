@@ -10,7 +10,7 @@ body {
   overflow-y: scroll;
 
 }
-
+/*header ab hier */
 .topnav {
   overflow:hidden;
   width: 100%;
@@ -39,10 +39,19 @@ header{
   width: 50px;
   cursor: pointer;
 }
-.menu{
-  width: 30px;
-  cursor: pointer;
-  margin-left: 4%;
+
+.el {
+  color: white;
+}
+.active {
+  color: #C0F7B7;
+}
+
+#elAct {
+  flex:1;
+}
+.active, .el:hover {
+  color: #C0F7B7;
 }
 nav {
     flex:1;
@@ -53,15 +62,16 @@ nav {
 nav ul li{
   list-style: none;
   display: inline-block;
-
   margin-left: 4%;
+  color: white;
 
 }
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   font-size: 14px;
 }
+/* Ende Header*/
 .pContainer {
   width:100%;
   height: 100vh;
@@ -69,28 +79,23 @@ nav ul li a {
   padding-right: 8%;
   padding-top: 8%;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7)),
-    url(../pictures/matrix.jpg);
-
-
+    url(../assets/matrix.jpg);
 }
+
 .CointainerC {
   padding-top:  4%;
-  height: 80%;
+  height: 1500px;
   background-color: inherit;
-
-
-
-
 }
+
 .CointainerC h1 {
 padding-bottom: 3%;
 text-align: center;
 font-size: 2em;
-
 }
+
 .content {
   padding: 2%;
-
 }
 .discoverlist {
     display: flex;
@@ -113,4 +118,6 @@ font-size: 2em;
   margin-right: 8px;
   background-color: rgba(20,27,41,0.6);
   color: #fff;
+}
+#Python {
 }
