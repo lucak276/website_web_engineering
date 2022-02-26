@@ -1,24 +1,39 @@
 // Wenn gescrolled wird, "sticky navbar" ausführen
-window.onscroll = function() {sticknavbar()};
+window.onscroll = function() {stickynavbar()};
 
 //topnav holen
-var topnav = document.getElementById("topnav");
+let topnav = document.getElementById("topnav");
 
 //Offset von topnav holen
-var sticky = topnav.offsetTop;
+let sticky = topnav.offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+//"sticky" wird hinzugefügt und ggf entfernt
 function stickynavbar() {
-  if (window.pageYOffset >= sticky) {
+  if (window.scrollY >= sticky) {
     topnav.classList.add("sticky")
   } else {
     topnav.classList.remove("sticky");
   }
 }
-btn.addEventListener(
-    'mouse over',
-    function (hoverMe) {
-      btn.style.color="";
 
-    },
-    false);
+//header active hover
+let elContainer = document.getElementById("elAct")
+
+let hdrs = elContainer.getElementsByClassName("el")
+
+for (let i=0; i <hdrs.length; i++)
+    hdrs[i].addEventListener("click",function() {
+
+        let current = document.getElementsByClassName("active");
+
+        if(current.length>0 ){
+            current[0].className = current[0].className.replace("active", "");
+        }
+        this.className += "active";
+    });
+
+let prefcont = document.getElementById("discoverlist")
+let prefs = document.getElementsByClassName("prefBtn")
+
+for ( let i=0; i <prefs.length; i++)
+    prefs[i].addEventListener(focus())

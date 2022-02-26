@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    color: #5AC994;
+    background: #141B29;
+    text-decoration: none;
+}
+
+.projects {
+    margin-top: 4%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.project_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    background-color: #124143;
+    margin: 10px;
+    width: 350px;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: justify;
+
+}
+
+.project_image img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.project_panel {
+    padding: 1.6rem 1rem 1rem 1rem;
+}
+
+.project_title h2{
+    font-size: 1.4rem;
+    color: #5AC994;
+    background-color: #124143;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.project_para {
+    padding-top: 0.1rem;
+    background: #124143;
+    text-align: center;
+}
+
+.project_para p{
+    font-weight: lighter;
+    color: #5AC994;
+    margin-bottom: 2%;
+    background:#124143;
+}
+
+.project_joinnow {
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 100;
+    background-color: #141B29;
+    width: fit-content;
+    position: relative;
+}
+
+.tags ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background: #124143;
+}
+
+.tags ul li{
+    margin: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 100;
+    background-color: #5AC994;
+    letter-spacing: 1px;
+    width: fit-content;
+}
+
+/*header ab hier */
+.topnav {
+    overflow:hidden;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+header{
+    background-color: rgba(20,27,41,0.8);
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+.searchbar {
+    display: inline-block;
+    float:right;
+    box-sizing: border-box;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+    flex:1;
+}
+
+.el {
+    color: white;
+}
+.active {
+    color: #C0F7B7;
+}
+
+#elAct {
+    flex: 1;
+    float: right;
+
+}
+.active, .el:hover {
+    color: #C0F7B7;
+}
+nav {
+    flex:1;
+    text-align: right;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 4%;
+    color: white;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+/* Ende Header*/

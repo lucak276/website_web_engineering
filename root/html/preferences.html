@@ -2,7 +2,9 @@
 <html lang="de">
 <head>
   <title>Preferences</title>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link rel="favicon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel='stylesheet' type='text/css'
     href="../css/preferencesStylepage.css">
@@ -19,22 +21,25 @@
       <header>
         <div class="topnav" id="topnav">
       <img src="../assets/logo.jpg" alt="logo" class="logo"/>
+          <div id="elAct" >
               <nav>
                 <ul>
-                  <li><a href="../index.html">Home</a></li>
-                  <li><a href="../html/">Forum</a></li>
-                  <li><a href="../html/loginpage.html">Login</a></li>
+                  <li><a  class="el" href="../index.html">Home</a></li>
+                  <li><a  class="el" href="../html/">Forum</a></li>
+                  <li><a  class="el" href="../html/loginpage.html">Login</a></li>
+                  <li><a  class="el active" href="../html/preferences.html">Preferences</a></li>
                 </ul>
             </nav>
+          </div>
         </div>
       </header>
       <main>
         <div class="pContainer">
         <div class="CointainerC glass content">
           <h1>Choose<span> your</span> Preferences</h1>
-          <div class="discoverlist">
+          <div id=discoverlist">
             <div class="preferenceContainer">
-              <button class="prefBtn" type="submit">Python</button>
+              <button class="prefBtn" id="Python" type="submit">Python</button>
             </div>
             <div class="preferenceContainer">
               <button class="prefBtn" type="submit">C</button>
@@ -81,12 +86,12 @@
             <div class="preferenceContainer">
             <button class="prefBtn" type="submit">Graphic Design</button>
             </div>
-            <div class="preferenceContainer">
-            <button class="prefBtn" type="submit"></button>
-            </div>
+          </div>
+          <div class="preferenceContainer">
+          <button id="prefSubmit">Abschicken</button>
           </div>
         </div>
-
+          </div>
         </div>
     </main>
   <footer>
