@@ -14,7 +14,7 @@
 	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 	<meta name="author" content="Luca Kaiser, Tobias Welt, Thomas Enzo Schmitz">
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src='https://kit.fontawesome.com/5a49021eb8.js' crossorigin="anonymous"></script>
 	<link rel="faBvicon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -32,11 +32,13 @@
 	<main>
 		<section class='two-sides-6-4'>
 			<div class='container padding-horizontal align-left'>
-				<h1 class='whiteheader'>
+				<h1 class='greenheader'>
 					<span id="change-content">print("hello world!")</span>
-					Verbinde dich jetzt mit anderen IT-Einsteigern! 
 				</h1>
-				<p class='whitetext'>
+				<h1 class='whiteheader'>
+					Verbinde dich jetzt mit anderen IT-Einsteigern!
+				</h1>
+				<p class='whitetext padding-vertical'>
 					Die beste Methode um Programmieren zu lernen ist durch ein Projekt.
 					Wir bieten eine Plattform um auch Neueinsteigern die Möglichkeit zu bieten an Projekten mitzuwirken oder auch selbst
 					eines ins Leben zu rufen. Finde so anhand einer praktischen Anwendungen deinen Weg in die Informatik
@@ -46,40 +48,38 @@
 			<img src="./assets/undraw_outer_space_re_u9vd.svg" alt="CountingStarsSVG" class='image'>
 		</section>
 
-		<section class='two-sides-3-7'>
+		<section class='two-sides-4-6'>
 
 			<aside class='padding-horizontal'>
 				<div class="container-steps">
-					<div class="btn-steps">
+					<button onclick='changetexttostep1()' class="btn-steps active">
 					  <div class="reposition-text whitetext">
 						<p>Schritt 1</p>
 					  </div>
-					</div>
+					</button>
 					<div class="steps-divider"></div>
-					<div class="btn-steps">
+					<button onclick='changetexttostep2()' class="btn-steps">
 					  <div class="reposition-text whitetext">
 						<p>Schritt 2</p>
 					  </div>
-					</div>
+					</button>
 					<div class="steps-divider"></div>
-					<div class="btn-steps">
+					<button onclick='changetexttostep3()' class="btn-steps">
 					  <div class="reposition-text whitetext">
 						<p>Schritt 3</p>
 					  </div>
-					</div>
+					</button>
 				  </div>
 			</aside>
 
-
-			<div class='container padding-horizontal align-left'>
-				<h2 class='padding-bottom whiteheader'>
-					Schritt 1: Registiere dich</h2>
-				<p class='whitetext'>
+			<div id="transition_container" class='container padding-horizontal align-left'>
+				<h2 id="stepsheader" class='whiteheader'>Schritt 1: Registiere dich</h2>
+				<p id="stepsbodytext" class='whitetext padding-vertical'>
 					Bevor du einem Projekt beitreten kannst, solltest du dir ein Konto anlegen.
 					Es gibt verschiedene Programmiersprachen. Bevor du einem Projekt beitritts solltest
-					du dich für eine Programmiersprache interessieren oder zumindest einen 
+					du dich für eine Programmiersprache interessieren oder zumindest einen
 				</p>
-				<button type='submit' class='btn btn-green'>Projekte finden</button>
+				<button id="stepsbutton" type='submit' class='btn btn-green'>Registieren</button>
 			</div>
 		</section>
 

@@ -9,7 +9,7 @@
 /* Textstyling */
 
 h1{
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   line-height: 4.5rem;
   font-weight: bold;
 }
@@ -34,6 +34,10 @@ p{
 
 .whiteheader{
   color: rgba(255, 255, 255, 0.9);
+}
+
+.greenheader{
+  color: rgba(192, 247, 183, 0.9);
 }
 
 .blackheader{
@@ -122,6 +126,13 @@ form{
   padding: 0.0px 5% 0.0px 5%;
   display: grid;
   grid-template-columns: 30% 70%;
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.two-sides-4-6{
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 40% 60%;
   grid-template-rows: repeat(1, 1fr);
 }
 

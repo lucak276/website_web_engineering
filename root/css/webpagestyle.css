@@ -34,11 +34,10 @@ body{
 /* timeline */
 
 .reposition-text{
-  width: 200%;
+  width: 220%;
   position: relative;
   left: 60.0px;
 }
-
 
 .container-steps{
   padding: 5.0px 120.0px 5.0px 5.0px;
@@ -60,8 +59,9 @@ body{
   height: 40.0px;
   width: 40.0px;
   position: relative;
-  border-radius: 35%;
+  border-radius: 30%;
   background-color: rgba(90, 201, 148, 1);
+  border: solid rgba(90, 201, 148, 1);
   align-items: center;
   text-align: center;
 }
@@ -69,18 +69,30 @@ body{
 .btn-steps:hover{
   transform: scale(120%);
   transition: all 0.25s;
-  opacity: 1;
 }
 
-.btn-steps:active{
+.btn-steps.active{
   z-index: 1;
   height: 40.0px;
   width: 40.0px;
   position: relative;
-  border-radius: 40%;
+  border-radius: 30%;
+  border: solid rgba(90, 201, 148, 1);
   background-color:rgba(192, 247, 183, 1);
-  align-items: center;
-  text-align: center;
+  transform: scale(120%);
+  transition: all 0.25s;
+}
+
+
+/* fading transition_container in and out */
+
+.hide {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: 1.5s;
 }
 
 /* wtf */
