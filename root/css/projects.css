@@ -48,13 +48,13 @@
     text-align: center;
 }
 
-.project_para {
+.project_text {
     padding-top: 0.1rem;
     background: #124143;
     text-align: center;
 }
 
-.project_para p{
+.project_text p{
     font-weight: lighter;
     color: #5AC994;
     margin-bottom: 2%;
@@ -62,7 +62,7 @@
 }
 
 .project_joinnow {
-    margin: 0 auto;
+    margin: 3% auto;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 100;
