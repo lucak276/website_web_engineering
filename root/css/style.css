@@ -130,8 +130,8 @@ p{
   padding: 20.0px 0px 40.0px 0px
 }
 
-/* Containers */
 
+/* Containers */
 
 form{
   display: flex;
@@ -269,6 +269,7 @@ form{
   background-position: center;
 }
 
+
 /* Styling */
 
 .glass{
@@ -280,6 +281,7 @@ form{
   border-radius: 20.0px;
   box-shadow: 0 10.0px 20.0px 0 rgba(0, 0, 0, 0.20);
 }
+
 
 /* Buttons */
 
@@ -386,9 +388,9 @@ button{
 }
 
 .socialspace .light span i {
-align-self: center;
-font-size: 40.0px;
-line-height: 80.0px;
+  align-self: center;
+  font-size: 40.0px;
+  line-height: 80.0px;
 }
 
 .socialspace .dark .tooltip {
@@ -412,8 +414,66 @@ line-height: 80.0px;
   opacity: 0.8;
 }
 
+
 /* Header */
 
+header{
+  background-color: rgba(20,27,41,1);
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 15.0px 80.0px;
+  display: flex;
+}
+
+header .CypherNexusLogo {
+  color: #fff;
+  background-color: #141B29;
+  opacity: 0.9;
+  font-size:  1.3em;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  background-color: #141B29;
+  color: #fff;
+  opacity: 0.9;
+  border-radius: 20.0px;
+}
+
+header ul li a.active{
+  background: #C0F7B7;
+  color: #141B29;
+}
+
+header ul li a:hover{
+  background: #C0F7B7;
+  color: #141B29;
+  opacity: 0.5;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 5%;
+  display: inline-block;
+}
 
 
 
@@ -559,5 +619,23 @@ line-height: 80.0px;
     font-size: 1rem;
     font-weight: 500;
   }
+
+  /* header */
+  header{
+    background-color: rgba(20,27,41,1);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 15.0px 80.0px;
+    display: flex;
+  }
+  
+  header .CypherNexusLogo {
+    display: none;
+  }
+  
 }
 

@@ -18,9 +18,9 @@
 
   /* Specific */
 
-  #login_leftsidetext{
-    display: none;
-  }
+#login_leftsidetext{
+  display: none;
+}
 
 body{
   display: flex;
