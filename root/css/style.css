@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/* Body color */
+body{
+  background-color: rgba(20, 27, 41, 1);
+}
+
 
 /* Textstyling */
 
@@ -79,12 +84,22 @@ p{
   opacity: 1;
 }
 
+/* Section division */
+.divide{
+  margin-top: 10%;
+}
+
 
 /* Padding */
 
 .padding-vertical{
-  padding-top: 20.0px;
-  padding-bottom: 20.0px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.padding-vertical2{
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
 
 .padding-bottom{
@@ -95,8 +110,20 @@ p{
   padding-left: 12.5%;
 }
 
+.padding-all{
+  padding: 10%;
+}
+
 .padding-horizontal{
   padding: 0.0px 10% 0.0px 10%;
+}
+
+.padding-horizontal2{
+  padding: 0.0px 5% 0.0px 5%;
+}
+
+.padding-horizontal3{
+  padding: 0.0px 15% 0.0px 15%;
 }
 
 .footerendpadding{
@@ -115,7 +142,6 @@ form{
 
 .two-sides-6-4{
   margin-top: 10%;
-  padding: 0.0px 5% 0.0px 5%;
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: repeat(1, 1fr);
@@ -129,13 +155,6 @@ form{
   grid-template-rows: repeat(1, 1fr);
 }
 
-.two-sides-4-6{
-  margin-top: 10%;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: repeat(1, 1fr);
-}
-
 .two-sides-2-8{
   margin-top: 10%;
   padding: 0.0px 5% 0.0px 5%;
@@ -146,7 +165,6 @@ form{
 
 .two-sides-even{
   margin-top: 10%;
-  padding: 0.0px 5% 0.0px 5%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -154,9 +172,8 @@ form{
 
 .two-sides-even2 {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: 50% 50%;
-  position: absolute;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   width: 100%;
   height: 100%;
 }
@@ -178,7 +195,6 @@ form{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 
@@ -217,7 +233,6 @@ form{
 }
 
 .align-center-flex{
-  padding: 200.0px 20% 0.0px 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,19 +289,21 @@ button{
 }
 
 .btn {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
   font-weight: bold;
   cursor: pointer;
   border: none;
   background-size: 100%;
   text-transform: uppercase;
   border-radius: 20.0px;
-  margin-top: 10.0px;
-  margin-bottom: 10.0px;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .btn-lightgreen {
-  height: 60.0px;
-  width: 340.0px;
+  height: 3.75rem;
+  width: 21.25rem;
   background-color: rgba(192, 247, 183, 1);
   color: rgba(0, 0, 0, 0.8);
   font-size: 17.0px;
@@ -297,8 +314,8 @@ button{
 }
 
 .btn-darkblue {
-  height: 60.0px;
-  width: 340.0px;
+  height: 3.75rem;
+  width: 21.25rem;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(20, 27, 41, 1);
   font-size: 17.0px;
@@ -309,8 +326,8 @@ button{
 }
 
 .btn-green {
-  height: 40.0px;
-  width: 220.0px;
+  height: 2.5rem;
+  width: 13.75rem;
   background-color: rgba(90, 201, 148, 1);
   color: rgba(0, 0, 0, 0.8);
   font-weight: bold;
@@ -326,12 +343,14 @@ button{
 
 .socialspace{
   align-items: center;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20.0px;
-  margin-top: 20.0px;
+  justify-content: center;
 }
 
 .socialspace .social-container {
+  padding-top: 0.5rem;
   margin: 0.0px 20.0px;
   cursor: pointer;
   align-items: center;
@@ -345,7 +364,6 @@ button{
   height: 60.0px;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.8);
-
   border-radius: 40%;
   display: block;
   align-items: center;
@@ -398,6 +416,8 @@ line-height: 80.0px;
 
 
 
+
+
 /*Footer*/
 
 .waves{
@@ -436,16 +456,108 @@ line-height: 80.0px;
   opacity: 0.8;
 }
 
-.aboutus {
-    padding: 200.0px 10% 0.0px 10%;
-    text-align: center;
-}
-
 .sub-aboutus{
     max-width: 1200px;
     margin: auto;
-    padding: 25px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 1000.0px){
+
+
+  /* Specific by id */
+
+  #rocket{
+    order: 1;
+    padding: 5% 5% 0 5%;
+  }
+  #welcometext{
+    order: 2;
+  }
+  #welcometextsmall{
+    display: none;
+  }
+
+
+  /* Container changes */
+
+  .two-sides-6-4 {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .two-sides-even2{
+    display: flex;
+    flex-flow: column;
+  }
+
+  .steps-two-sides{
+    grid-template-columns: 30% 70%;
+  }
+
+  .reposition-text{
+    display: none;
+  }
+
+  .two-sides-even{
+    display: block;
+  }
+
+  .container{
+    height: auto;
+    width: auto;
+  }
+
+  .left-side{
+    display: none;
+  }
+
+  .container-steps{
+    padding: 0px;
+  }
+
+
+  /* Padding changes */
+
+  .padding-horizontal{
+    padding: 0 5% 0 5%;
+  }
+
+  .padding-horizontal3{
+    padding: 0 10% 0 10%;
+  }
+
+}
+
+@media only screen and (max-width: 800.0px){
+
+
+  /* Text Styling */
+
+  h1{
+    font-size: 2.4rem;
+    line-height: 3.0rem;
+    font-weight: bold;
+  }
+  
+  h2{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+  }
+  
+  h3{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+  }
+  
+  p{
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+

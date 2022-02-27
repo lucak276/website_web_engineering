@@ -1,2 +1,6 @@
 User-agent: *
 Disallow: /hidden/
+Disallow: /html/404_page.html
+Disallow: /html/403_page.html
+Disallow: /html/401_page.html
+Disallow: /html/500_page.html

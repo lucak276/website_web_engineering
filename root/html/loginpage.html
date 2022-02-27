@@ -18,21 +18,21 @@
 	</head>
 
 <body>
-	<main>
+	<div class="display-login">
 		<div class='two-sides-even2'>
-			<aside class='container-center align-left'>
+			<aside class='container-center align-left' id="login_leftsidetext">
 				<div class='paddingleft'>
 					<h1 class='padding-vertical leftsidetext blacktext'>Willkommen im CypherNexus!</h1>
 					<img src='../assets/login_page_character.svg' alt='' class='left-side-image'>
 					<h3 class='padding-vertical leftsidetext blacktext'>Wir bilden die Brücke zwischen dir und anderen lernbegierigen Tech-Einsteigern! Du hast noch kein Konto?</h3>
-					<a href ='/root/html/registerpage.html'><button class='btn btn-darkblue'>jetzt registrieren</button></a>
+					<a href ='/registerpage.html'><button class='btn btn-darkblue'>jetzt registrieren</button></a>
 				</div>
 			</aside>
 
-			<div class='container-center'>
+			<main class='container-center'>
 				<div class='container-login glass'>
                     <form method='post' action='/login' class='signin-signup'>
-                        <h2 class='padding-vertical whiteheader'>Login</h2>
+                        <h2 class='padding-vertical2 whiteheader'>Login</h2>
                         <div class='input-field'>
                             <i class='fas fa-user'></i>
                             <input type='text' placeholder='Username' />
@@ -47,9 +47,9 @@
                                 <label for='remembercheckbox'>Angemeldet bleiben</label>
                             </div>
                         <button type='submit' class='btn btn-lightgreen'>Anmelden</button>
-												<div class='padding-vertical register-text'>Du hast noch kein Konto?
-													<a href ='#'>Jetzt registieren</a></div>
-                        <div class='small-text'>Oder melden Sie sich mit Platformen an</div>
+												<div class='padding-vertical left-right-text'>Du hast noch kein Konto?
+													<a href ='./registerpage.html'> Jetzt registieren</a></div>
+                        <div class='small-text padding-vertical'>Oder melden Sie sich mit Platformen an</div>
                     <div class='socialspace'>
                         <div class='social-container light'>
                             <span><i class ='fab fa-facebook-f'></i></span>
@@ -66,12 +66,10 @@
                     </div>
                     </form>
                 </div>
-				<div class='forgot-password-text'>Passwort vergessen?
+				<div class='left-right-text'>Passwort vergessen?
 					<a href ='#'>Hier zurücksetzen</a></div>
-				<div class='forgot-password-text'>Noch nicht registriert?
-					<a href ='/root/html/registerpage.html'>Jetzt registrieren</a></div>
-			</div>
+				</main>
 		</div>
-	</main>
+	</div>
 </body>
 </html>

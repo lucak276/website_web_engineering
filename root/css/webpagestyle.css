@@ -1,10 +1,9 @@
-body{
-  background-color: rgba(20, 27, 41, 1);
+.aboutus {
+  text-align: center;
 }
 
 .team{
-    margin: 20px;
-    padding: 50px;
+    padding: 5%;
 }
 
 .team img {
@@ -33,10 +32,11 @@ body{
 
 /* timeline */
 
-.reposition-text{
-  width: 220%;
-  position: relative;
-  left: 60.0px;
+.steps-two-sides{
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(1, 1fr);
 }
 
 .container-steps{
@@ -81,6 +81,12 @@ body{
   background-color:rgba(192, 247, 183, 1);
   transform: scale(120%);
   transition: all 0.25s;
+}
+
+.reposition-text{
+  width: 220%;
+  position: relative;
+  left: 60.0px;
 }
 
 

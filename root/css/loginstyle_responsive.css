@@ -1,12 +1,6 @@
 @media only screen and (max-width: 800.0px){
 
-  body{
-    background-image: none;
-    background-color: rgba(20, 27, 41, 1);
-  }
-
   .both-sides-login {
-    background-color: rgba(255, 0, 0, 0.5);
       display: table;
   }
 
@@ -20,16 +14,19 @@
   }
 }
 
-@media only screen and (max-width: 1200.0px){
+@media only screen and (max-width: 1000.0px){
+
+  /* Specific */
+
+  #login_leftsidetext{
+    display: none;
+  }
 
 body{
+  display: flex;
+  flex-direction: column;
   background-image: none;
   background-color: rgba(20, 27, 41, 1);
-}
-
-.both-sides-login {
-  background-color: rgba(0, 255, 0, 0.5);
-    display: table;
 }
 
 .container{

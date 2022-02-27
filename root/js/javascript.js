@@ -71,8 +71,7 @@ function changetexttostep3() {
     stepsheader.innerHTML = "Schritt 3: Spring vom Hochhaus";
     stepstext.innerHTML = "nec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla\
     consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\
-    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede\
-    mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi"
+    In enim justo, rhoncus ut, imperdiet a, venenatis vitae."
     button.innerHTML = 'LELELELELEL'
   }
 }
@@ -82,7 +81,7 @@ function changetexttostep3() {
 //hello world change to Herzlich willkommen
 var char = ['0', '1']
 var list = ['print("hello world!")'];
-var list2 = ['Herzlich Willkommen! ']
+var list2 = ['Herzlich Willkommen!']
 var changenum = 0
 var changenum2 = 21
 createlist()
@@ -101,11 +100,11 @@ function createlist(){
 
 
 setTimeout(function () {
-  var t = setInterval(haeee, 50)
+  var t = setInterval(changecontent, 50)
 }, 1000);
 
 
-function haeee(){
+function changecontent(){
     $('#change-content').html(list[changenum]);
     changenum++
 
