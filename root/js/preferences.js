@@ -1,28 +1,28 @@
-// Wenn gescrolled wird, "sticky navbar" ausführen
-window.onscroll = function() {stickynavbar()};
+//if scrolled execute sticky_navbar function
+window.onscroll = function() {sticky_navbar()};
 
-//topnav holen
-let topnav = document.getElementById("topnav");
+// get top_nav
+let top_nav = document.getElementById("top_nav");
 
-//Offset von topnav holen
-let sticky = topnav.offsetTop;
+//get offset by top_nav
+let sticky = top_nav.offsetTop;
 
-//"sticky" wird hinzugefügt und ggf entfernt
-function stickynavbar() {
+//sticky will be added or removed
+function sticky_navbar() {
   if (window.scrollY >= sticky) {
-    topnav.classList.add("sticky")
+    top_nav.classList.add("sticky")
   } else {
-    topnav.classList.remove("sticky");
+    top_nav.classList.remove("sticky");
   }
 }
 
 //header active hover
-let elContainer = document.getElementById("elAct")
+let el_container = document.getElementById("el-act")
 
-let hdrs = elContainer.getElementsByClassName("el")
+let headers = el_container.getElementsByClassName(".el")
 
-for (let i=0; i <hdrs.length; i++)
-    hdrs[i].addEventListener("click",function() {
+for (let i=0; i <headers.length; i++)
+    headers[i].addEventListener("click",function() {
 
         let current = document.getElementsByClassName("active");
 
@@ -32,8 +32,18 @@ for (let i=0; i <hdrs.length; i++)
         this.className += "active";
     });
 
-let prefcont = document.getElementById("discoverlist")
-let prefs = document.getElementsByClassName("prefBtn")
+// preference buttons on click event to mark them as checked
+let list = document.getElementById("discover_list")
+let buttons = list.getElementsByClassName("prefBtn")
+console.log(buttons)
+for (let i=0; i <buttons.length; i++)
+    buttons[i].addEventListener("click",function() {
 
-for ( let i=0; i <prefs.length; i++)
-    prefs[i].addEventListener(focus())
+        let current = document.getElementsByClassName("chosen");
+
+        if(current.length>0 ){
+            current[0].className = current[0].className.replace("chosen", "");
+        }
+        this.className += "chosen";
+    });
+
