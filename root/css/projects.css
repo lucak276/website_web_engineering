@@ -86,65 +86,70 @@
     width: fit-content;
 }
 
-/*header ab hier */
-.topnav {
-    overflow:hidden;
-    width: 100%;
-    height: 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Header */
 
-
-}
 header{
-    background-color: rgba(20,27,41,0.8);
+    background-color: rgba(20,27,41,1);
     padding-left: 4%;
     padding-right: 4%;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 99999;
-}
-
-.logo{
-    width: 50px;
-    cursor: pointer;
-    flex:1;
-}
-
-.el {
-    color: white;
-}
-.active {
-    color: #C0F7B7;
-}
-
-#elAct {
-    flex: 1;
-    float: right;
-
-}
-.active, .el:hover {
-    color: #C0F7B7;
-}
-nav {
-    flex:1;
-    text-align: right;
-    padding-bottom: 1.5%;
-    padding-top: 1.5%;
-}
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 4%;
-    color: white;
-}
-nav ul li a {
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 15.0px 80.0px;
+    display: flex;
+  }
+  
+  header .CypherNexusLogo {
+    color: #fff;
+    background-color: #141B29;
+    opacity: 0.9;
+    font-size:  1.3em;
+    font-weight: 700;
     text-decoration: none;
-    color: white;
-    font-size: 14px;
-}
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    background-color: #141B29;
+    color: #fff;
+    opacity: 0.9;
+    border-radius: 20.0px;
+  }
+  
+  header ul li a.active{
+    background: #C0F7B7;
+    color: #141B29;
+  }
+
+  header ul li a.create{
+    background: #124143;
+    color: #fff;
+  }
+  
+  header ul li a:hover{
+    background: #C0F7B7;
+    color: #141B29;
+    opacity: 0.5;
+  }
+  
+  header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header ul li {
+    list-style: none;
+    margin-left: 5%;
+    display: inline-block;
+  }
 /* Ende Header*/
 
 
@@ -159,6 +164,3 @@ nav ul li a {
     border-radius: 20.0px;
     box-shadow: 0 10.0px 20.0px 0 rgba(0, 0, 0, 0.20);
   }
-
-  /* Ende Glass container*/
- 
