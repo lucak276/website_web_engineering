@@ -12,6 +12,10 @@ body {
 
 
 }
+<<<<<<< HEAD:root/css/preferencesStylepage.css
+
+.pContainer {
+=======
 /*header ab hier */
 .top_nav {
   overflow:hidden;
@@ -76,6 +80,7 @@ nav ul li a {
 }
 /* Ende Header*/
 .container_p {
+>>>>>>> 825cebffbd461d4b03c02bf31659c71450c01105:root/css/preference_style.css
   width:100%;
   height: 100vh;
   padding-left: 8%;
