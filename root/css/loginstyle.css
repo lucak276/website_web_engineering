@@ -90,6 +90,20 @@ textarea{
   color: rgba(0, 0, 0, 0.75);
 }
 
+/* Login goes wrong texts */
+
+#wrong-user-text{
+  display: none;
+}
+
+#wrong-password-text{
+  display: none;
+}
+
+#registernow{
+  display: none;
+}
+
 .left-right-text{
   text-align: center;
   color: rgba(255, 255, 255, 0.75);

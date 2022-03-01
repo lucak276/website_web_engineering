@@ -29,8 +29,8 @@
 		</ul>
 	</header>
 	<main class="padding-horizontal2">
-		<section class='divide two-sides-6-4'>
-			<div class='container padding-horizontal align-left' id="welcometext">
+		<div class='divide two-sides-6-4'>
+			<section class='container padding-horizontal align-left' id="welcometext">
 				<h1 class='greenheader'>
 					<span id="change-content">print("hello world!")</span>
 				</h1>
@@ -38,82 +38,71 @@
 					Verbinde dich jetzt mit anderen IT-Einsteigern!
 				</h1>
 				<p class='whitetext padding-vertical' id="welcometextsmall">
-					Die beste Methode um Programmieren zu lernen ist durch ein Projekt.
-					Wir bieten eine Plattform um auch Neueinsteigern die Möglichkeit zu bieten an Projekten mitzuwirken oder auch selbst
-					eines ins Leben zu rufen.
+					Die beste Methode um Programmieren zu lernen ist durch die Arbeit an einem Projekt.
+					Wir wollen euch eine Plattform bieten um euch mit anderen Neueinsteigern zu verbinden.
 				</p>
-				<button class='btn btn-lightgreen'>jetzt Registrieren</button>
-			</div>
+				<button class='btn btn-lightgreen'>Jetzt Registrieren</button>
+			</section>
 			<img src="./assets/undraw_outer_space_re_u9vd.svg" alt="CountingStarsSVG" class='image' id="rocket">
-		</section>
+		</div>
 
-		<section class='divide steps-two-sides'>
+		<div class='divide steps-two-sides'>
 			<aside class="container-steps">
-					<button onclick='changetexttostep1()' class="btn-steps active">
-					  <div class="reposition-text whitetext">
-						<p>Schritt 1</p>
-					  </div>
-					</button>
+					<div onclick='changetexttostep1()' class="btn-steps active">
+						<p class="reposition-text whitetext">Schritt 1</p>
+					</div>
 					<div class="steps-divider"></div>
-					<button onclick='changetexttostep2()' class="btn-steps">
-					  <div class="reposition-text whitetext">
-						<p>Schritt 2</p>
-					  </div>
-					</button>
+					<div onclick='changetexttostep2()' class="btn-steps">
+						<p class="reposition-text whitetext">Schritt 2</p>
+					</div>
 					<div class="steps-divider"></div>
-					<button onclick='changetexttostep3()' class="btn-steps">
-					  <div class="reposition-text whitetext">
-						<p>Schritt 3</p>
-					  </div>
-					</button>
+					<div onclick='changetexttostep3()' class="btn-steps">
+						<p class="reposition-text whitetext">Schritt 3</p>
+					</div>
 			</aside>
 
-			<div id="transition_container" class='container padding-horizontal2 align-left'>
+			<section id="transition_container" class='container padding-horizontal2 align-left'>
 				<h2 id="stepsheader" class='whiteheader'>Schritt 1: Registiere dich</h2>
 				<p id="stepsbodytext" class='whitetext padding-vertical'>
-					Bevor du einem Projekt beitreten kannst, solltest du dir ein Konto anlegen.
-					Es gibt verschiedene Programmiersprachen. Bevor du einem Projekt beitritts solltest
-					du dich für eine Programmiersprache interessieren oder zumindest einen
+					Um einem Projekt beizutreten solltest du dir ein Profil erstellen.
+					Erstelle dir deinen individuellen Benutzernamen und ein sicheres Passwort,
+					noch ein paar Angaben zu dir und los gehts!
 				</p>
 				<button id="stepsbutton" type='submit' class='btn btn-green'>Registieren</button>
-			</div>
-		</section>
+			</section>
+		</div>
 
-		<section class='divide align-center-flex'>
+		<div class='divide align-center-flex'>
 			<img src='./assets/working_remotely_.svg' alt='' class='image padding-horizontal3'>
 			<br>
-			<div class='padding-horizontal3'>
+			<section class='padding-horizontal3'>
 				<h2 class='whiteheader'>
 					All das bequem von Zuhause!</h2>
 				<p class='whitetext padding-vertical'>
-					Unsere Welt dreht sich mit jedem Tag schneller. Das Internet hat nahezu jede vorstellbare
-					Information in jeden Haushalt dieser
-					Welt gebracht. Unsere Welt dreht sich mit jedem Tag schneller. Das Internet hat nahezu jede vorstellbare
-					Information in jeden Haushalt dieser
-					Welt gebracht.
+					Finde dein Projekt und lerne die unbegrenzte Welt der Programmierung kennen.
+					Ob Front End oder Back End, hier findest du für deine Interessen ein Projekt.
+					Und wenn es noch keines gibt, kannst du dir einfach ein eigenes erstellen und
+					dich mit anderen dafür zusammenschließen.
 				</p>
 				<button type='submit' class='btn btn-green'>Projekte finden</button>
-			</div>
-		</section>
+			</section>
+		</div>
 
-		<section class='divide two-sides-even'>
+		<div class='divide two-sides-even'>
 			<aside class='padding-all align-all'>
 				<img src='./assets/collaboration.svg' alt='' class='image'>
 			</aside>
 
-			<div class='container padding-horizontal align-left'>
+			<section class='container padding-horizontal align-left'>
 				<h2 class='whiteheader'>
 					Learn and grow together!</h2>
 				<p class='whitetext padding-vertical'>
-					Manchmal benötigt es einiges an überwinfung sich mit anderen zusammen
-					zu tun. Aber ich sage dir wenn du das machst
-					bruder du wirst meis krass in dieser informatik
-					und verdienst dann irgendwanmn geisteskrank viel parra
-					und kannst. Es gibt keinen Grund schüchtern zu sein!
+					Zusammen lernt und arbeitet es sich am besten. Jeder hat seine eigenen Stärken
+					und Schwächen, so kann man sich gegenseitig unterstützen und aneinander wachsen.
 				</p>
 				<button type='submit' class='btn btn-green'>Projekte finden</button>
-			</div>
-		</section>
+			</section>
+		</div>
 	</main>
 	<footer class='footer'>
 		<div class="waves"></div>
@@ -140,11 +129,10 @@
 			<li><a href='#'>Rechtliches</a></li>
 			<li><a href='#'>Hilfe</a></li>
 			<li><a href='./html/aboutus.html'>Unser Team</a></li>
-			<li><a href='#'>Leeeeeeel</a></li>
 		</ul>
 		<div class='footerendpadding blacksmalltext'>© 2022 CypherNexus</div>
 	</footer>
-	<script src="./js/javascript.js" charset="utf-8"></script>
+	<script src="./js/javascript.js"></script>
 </body>
 
 </html>

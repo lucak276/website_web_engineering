@@ -35,20 +35,25 @@
                         <h2 class='padding-vertical2 whiteheader'>Login</h2>
                         <div class='input-field'>
                             <i class='fas fa-user'></i>
-                            <input type='text' placeholder='Username' />
+                            <input type='text' placeholder='Username'/>
                         </div>
+						<div class="small-text red" id="wrong-user-text">
+							Dieser User scheint nicht zu existieren.
+						</div>
                         <div class='input-field'>
                             <i class='fas fa-lock'></i>
                             <input type='password' placeholder='Password' minlength='8' required/>
-
                         </div>
+						<div class="small-text red" id="wrong-password-text">
+							Falches Passwort, bitte versuchen Sie es erneut.
+						</div>
                             <div class='container-remembercheckbox'>
                                 <input type='checkbox' id='remembercheckbox' class='remembercheckbox' value='remember' checked>
                                 <label for='remembercheckbox'>Angemeldet bleiben</label>
                             </div>
                         <button type='submit' class='btn btn-lightgreen'>Anmelden</button>
-												<div class='padding-vertical left-right-text'>Du hast noch kein Konto?
-													<a href ='./registerpage.html'> Jetzt registieren</a></div>
+							<div id='registernow' class='padding-vertical left-right-text'>Du hast noch kein Konto?
+								<a href ='./registerpage.html'> Jetzt registieren</a></div>
                         <div class='small-text padding-vertical'>Oder melden Sie sich mit Platformen an</div>
                     <div class='socialspace'>
                         <div class='social-container light'>

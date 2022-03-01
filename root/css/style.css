@@ -5,7 +5,9 @@
   box-sizing: border-box;
 }
 
+
 /* Body color */
+
 body{
   background-color: rgba(20, 27, 41, 1);
 }
@@ -43,6 +45,10 @@ p{
 
 .greenheader{
   color: rgba(192, 247, 183, 0.9);
+}
+
+.greenheader2{
+  color: rgba(90, 201, 148, 1);
 }
 
 .blackheader{
@@ -87,6 +93,12 @@ p{
 /* Section division */
 .divide{
   margin-top: 10%;
+}
+
+
+/* Colors */
+.red{
+  color: rgba(255, 86, 102, 1);
 }
 
 

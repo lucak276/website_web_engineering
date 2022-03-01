@@ -1,22 +1,12 @@
-@media only screen and (max-width: 800.0px){
 
-  .both-sides-login {
-      display: table;
-  }
-
-  .container{
-    height: auto;
-    width: auto;
-  }
-
-  .left-side{
-    display: none;
-  }
-}
 
 @media only screen and (max-width: 1000.0px){
 
   /* Specific */
+
+#registernow{
+  display: flex;
+}
 
 #login_leftsidetext{
   display: none;
