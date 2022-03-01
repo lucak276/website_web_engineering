@@ -43,14 +43,12 @@
 .project_title h2{
     font-size: 1.4rem;
     color: #5AC994;
-    background-color: #124143;
     font-weight: lighter;
     text-align: center;
 }
 
 .project_text {
     padding-top: 0.1rem;
-    background: #124143;
     text-align: center;
 }
 
@@ -58,7 +56,6 @@
     font-weight: lighter;
     color: #5AC994;
     margin-bottom: 2%;
-    background:#124143;
 }
 
 .project_joinnow {
@@ -76,7 +73,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    background: #124143;
+
 }
 
 .tags ul li{
@@ -110,11 +107,7 @@ header{
     top: 0;
     z-index: 99999;
 }
-.searchbar {
-    display: inline-block;
-    float:right;
-    box-sizing: border-box;
-}
+
 .logo{
     width: 50px;
     cursor: pointer;
@@ -154,3 +147,19 @@ nav ul li a {
     font-size: 14px;
 }
 /* Ende Header*/
+
+
+/* Glass container*/
+
+.glass{
+    padding: 2.0% 0 2.0% 0;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0));
+    backdrop-filter: blur(10.0px);
+    -webkit-backdrop-filter: blur(20.0px);
+    border: 1.0px solid rgba(255, 255, 255, 0.20);
+    border-radius: 20.0px;
+    box-shadow: 0 10.0px 20.0px 0 rgba(0, 0, 0, 0.20);
+  }
+
+  /* Ende Glass container*/
+ 
