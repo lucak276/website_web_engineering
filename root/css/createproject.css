@@ -1,0 +1,151 @@
+.asideobj{
+    display: flex;
+    background-image: url(../assets/wave-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* nochmal diese Container überprüfen*/
+  
+  .container-remembercheckbox{
+    padding: 10.0px 0.0px 10.0px 90.0px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    align-self: flex-start;
+    align-items: stretch;
+  }
+  
+  .container-rememberradiobox{
+    padding: 10.0px 0.0px 10.0px 90.0px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    align-self: flex-start;
+    align-items: stretch;
+  }
+  
+  .remembercheckbox{
+    appearance: none;
+    margin-right: 5.0px;
+    height: 17.0px;
+    width: 17.0px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 100%;
+    vertical-align: text-bottom;
+    border: 2.0px solid #ddd;
+    outline: 20.0px;
+    cursor: pointer;
+  }
+  
+  .remembercheckbox:checked {
+    background-color: rgba(192, 247, 183, 1);
+  }
+  
+  .input-field{
+    position: relative;
+    max-width: 340.0px;
+    padding: 0 0.4rem; /* rem oder em besser als pixel? */
+    width: 100%;
+    height: 3.75rem;
+    margin: 10.0px 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 20.0px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+  }
+  
+  
+  textarea{
+    resize: none;
+    max-width: 340.0px;
+    padding: 0 0.9rem; /* rem oder em besser als pixel? */
+    width: 100%;
+    margin: 10.0px 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 20.0px;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1rem;
+    border: none;
+    outline: none;
+  }
+  
+  .input-field i {
+    text-align: center;
+    line-height: 3.75rem;
+    color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .input-field input {
+    line-height: 1;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.75);
+  }
+  
+  /* Login goes wrong texts */
+  
+  
+  #wrong-user-text{
+    padding-bottom: 2%;
+  }
+  
+  #wrong-password-text{
+    padding-bottom: 2%;
+  }
+  
+  @keyframes shake {
+    0%, 20%, 40%, 60%, 80% {
+      transform: translateX(8px);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-8px);
+    }
+  }
+  
+  @keyframes glow-red {
+    50% {
+      border-color: indianred;
+    }
+  }
+  
+  
+  /* Register now */
+  
+  #registernow{
+    display: none;
+  }
+  
+  .left-right-text{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .left-right-text a{
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(192, 247, 183, 1);
+    font-weight: 600;
+  }
+  
+  .left-right-text a:hover{
+    opacity: 0.8;
+  }
+  
+  .checkbox{
+    padding-right: 10.0px;
+  }
+  
