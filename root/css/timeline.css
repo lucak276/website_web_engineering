@@ -21,13 +21,11 @@ p{
   justify-content: center;
 }
 
-
 .reposition-text{
   width: 200%;
   position: relative;
   left: 60.0px;
 }
-
 
 .container-steps{
   background-color: rgb(119, 139, 139);
