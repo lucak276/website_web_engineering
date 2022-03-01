@@ -52,7 +52,7 @@ p{
 }
 
 .blackheader{
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .whitetext{
@@ -116,6 +116,10 @@ p{
 
 .padding-bottom{
   padding-bottom: 20.0px;
+}
+
+.padding-top{
+  padding-top: 2%;
 }
 
 .paddingleft{

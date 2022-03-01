@@ -58,6 +58,22 @@ body{
   grid-template-columns: 15% 85%;
 }
 
+
+textarea{
+  resize: none;
+  max-width: 340.0px;
+  padding: 0 0.9rem; /* rem oder em besser als pixel? */
+  width: 100%;
+  margin: 10.0px 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20.0px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
 .input-field i {
   text-align: center;
   line-height: 3.75rem;
