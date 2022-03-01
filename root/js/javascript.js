@@ -46,9 +46,10 @@ function changetexttostep1() {
   {
     stepsheader.innerHTML = "Schritt 1: Registiere dich";
     mycurrentstep = 1
-    stepstext.innerHTML = "Bevor du einem Projekt beitreten kannst, solltest du dir ein Konto anlegen.\
-    Es gibt verschiedene Programmiersprachen. Bevor du einem Projekt beitritts solltest\
-    du dich für eine Programmiersprache interessieren oder zumindest einen"
+    stepstext.innerHTML = "Um einem Projekt beizutreten erstelle dir ein Profil.\
+                           Erstelle dir deinen individuellen Benutzernamen und ein sicheres Passwort,\
+                           noch ein paar Angaben zu dir und los gehts!\
+                           "
     button.innerHTML = 'Registieren'
   }
 }
@@ -57,10 +58,11 @@ function changetexttostep2() {
   if(mycurrentstep != 2)
   {
     mycurrentstep = 2
-    stepsheader.innerHTML = "Schritt 2: Augen zu";
-    stepstext.innerHTML = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\
-    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultric"
-    button.innerHTML = 'Mach'
+    stepsheader.innerHTML = "Schritt 2: Choose your preferences";
+    stepstext.innerHTML = "Wähle deine Lieblingsthemen aus.\
+                           Von Alltagsanwendungen bis hinzu \
+                           futuristischen Themen wie AI oder Quantum Computing findest du hier alles."
+    button.innerHTML = 'Registrieren'
   }
 }
 
@@ -68,11 +70,10 @@ function changetexttostep3() {
   if(mycurrentstep != 3)
   {
     mycurrentstep = 3
-    stepsheader.innerHTML = "Schritt 3: Spring vom Hochhaus";
-    stepstext.innerHTML = "nec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla\
-    consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\
-    In enim justo, rhoncus ut, imperdiet a, venenatis vitae."
-    button.innerHTML = 'LELELELELEL'
+    stepsheader.innerHTML = "Schritt 3: Join a project";
+    stepstext.innerHTML = "Nach dem du deine Lieblingsthemen ausgesucht hast \
+        kannst du dir nun ein Projekt deiner Wahl aussuchen oder dein eigenes erstellen."
+    button.innerHTML = 'Registrieren'
   }
 }
 
