@@ -88,15 +88,3 @@
   position: relative;
   left: 60.0px;
 }
-
-
-/* fading transition_container in and out */
-
-.hide {
-  opacity: 0;
-}
-
-.fade-in {
-  opacity: 1;
-  transition: 1.5s;
-}

@@ -5,7 +5,7 @@
   /* Specific */
 
 #registernow{
-  display: flex;
+  display: block;
 }
 
 #login_leftsidetext{

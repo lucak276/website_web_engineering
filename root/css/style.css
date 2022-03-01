@@ -145,13 +145,6 @@ p{
 
 /* Containers */
 
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .two-sides-6-4{
   margin-top: 10%;
   display: grid;
@@ -194,6 +187,7 @@ form{
   justify-content: center;
   display: flex;
   flex-direction: column;
+  align-items: center; /*neu geadded*/
 }
 
 .container-login {
@@ -651,3 +645,25 @@ header ul li {
   
 }
 
+
+/* ANIMATIONS // fading transition_container in and out */
+
+.remove{
+  display: none;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: 1.5s;
+}
+
+/* shake container and glow red if password is wrong*/
+.shake-container-red{
+  animation-name: shake, glow-red;
+  animation-duration: 0.8s, 1s;
+  animation-iteration-count: 1, 1;
+}

@@ -14,7 +14,7 @@
 		<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<script src='https://kit.fontawesome.com/5a49021eb8.js' crossorigin="anonymous"></script>
-		<script src='javascript.js'></script>
+		<script src="../js/login_and_register.js" charset="utf-8"></script>
 	</head>
 
 <body>
@@ -25,33 +25,33 @@
 					<h1 class='padding-vertical leftsidetext blacktext'>Willkommen im CypherNexus!</h1>
 					<img src='../assets/login_page_character.svg' alt='' class='left-side-image'>
 					<h3 class='padding-vertical leftsidetext blacktext'>Wir bilden die Brücke zwischen dir und anderen lernbegierigen Tech-Einsteigern! Du hast noch kein Konto?</h3>
-					<a href ='./registerpage.html'><button class='btn btn-darkblue'>jetzt registrieren</button></a>
+					<button href ='./registerpage.html' class='btn btn-darkblue'>jetzt registrieren</button>
 				</div>
 			</aside>
 
 			<main class='container-center'>
-				<div class='container-login glass'>
-                    <form method='post' action='/login' class='signin-signup'>
+				<div class='container-login glass' id="glasscontainer-login">
+                    <div class='container-center signin-signup'>
                         <h2 class='padding-vertical2 whiteheader'>Login</h2>
                         <div class='input-field'>
                             <i class='fas fa-user'></i>
-                            <input type='text' placeholder='Username'/>
+                            <input id='usernameinput' type='username' placeholder='Username'/>
                         </div>
-						<div class="small-text red" id="wrong-user-text">
+						<div class="remove small-text red" id="wrong-user-text">
 							Dieser User scheint nicht zu existieren.
 						</div>
                         <div class='input-field'>
                             <i class='fas fa-lock'></i>
-                            <input type='password' placeholder='Password' minlength='8' required/>
+                            <input id='passwordinput' type='password' placeholder='Password' minlength='8' required/>
                         </div>
-						<div class="small-text red" id="wrong-password-text">
+						<div class="remove small-text red" id="wrong-password-text">
 							Falches Passwort, bitte versuchen Sie es erneut.
 						</div>
                             <div class='container-remembercheckbox'>
                                 <input type='checkbox' id='remembercheckbox' class='remembercheckbox' value='remember' checked>
                                 <label for='remembercheckbox'>Angemeldet bleiben</label>
                             </div>
-                        <button type='submit' class='btn btn-lightgreen'>Anmelden</button>
+                        <button onClick="login()" class='btn btn-lightgreen'>Anmelden</button>
 							<div id='registernow' class='padding-vertical left-right-text'>Du hast noch kein Konto?
 								<a href ='./registerpage.html'> Jetzt registieren</a></div>
                         <div class='small-text padding-vertical'>Oder melden Sie sich mit Platformen an</div>
@@ -69,7 +69,7 @@
                             <div class='tooltip'>Google</div>
                         </div>
                     </div>
-                    </form>
+				</div>
                 </div>
 				<div class='left-right-text'>Passwort vergessen?
 					<a href ='#'>Hier zurücksetzen</a></div>
