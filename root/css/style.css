@@ -126,6 +126,10 @@ p{
   padding-left: 12.5%;
 }
 
+.padding-left2{
+  padding-left: 3%;
+}
+
 .padding-all{
   padding: 10%;
 }
@@ -266,6 +270,10 @@ p{
 
 .image{
   width: 100%
+}
+
+.image-cnlogo {
+  width: 6%;
 }
 
 
@@ -443,7 +451,6 @@ header{
 }
 
 header .CypherNexusLogo {
-  color: #fff;
   background-color: #141B29;
   opacity: 0.9;
   font-size:  1.3em;
