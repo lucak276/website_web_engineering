@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<title>CypherNexus</title>
+	<link rel='stylesheet' type='text/css' href='./css/webpagestyle.css'>
+	<link rel='stylesheet' type='text/css' href='./css/webpagestyle_responsive.css'>
+	<link rel='stylesheet' type='text/css' href='./css/style.css'>
+	<meta charset='UTF-8'>
+	<meta name="description" content="Loginform, Registerform, Registrierungsformular, Loginformular">
+	<meta name="keywords" content="Login, Register, Registrieren, Anmelden, Anmeldung">
+	<meta name='viewport' content="width=device-width, initial-scale=1.0">
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+	<meta name="author" content="Luca Kaiser, Tobias Welt, Thomas Enzo Schmitz">
+	<link rel="faBvicon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+	<header>
+		<a href='#' class='CypherNexusLogo'>CypherNexus</a>
+		<ul>
+			<li><a href="#" class='active'>Home</a></li>
+			<li><a href="#">Nexus</a></li>
+			<li><a href="./login">Login</a></li>
+			<li><a href="./aboutus">About Us</a></li>
+		</ul>
+	</header>
+	<main class="padding-horizontal2">
+		<div class='divide two-sides-6-4'>
+			<section class='container padding-horizontal align-left' id="welcometext">
+				<h1 class='greenheader'>
+					<span id="change-content">print("hello world!")</span>
+				</h1>
+				<h1 class='whiteheader'>
+					Verbinde dich jetzt mit anderen IT-Einsteigern!
+				</h1>
+				<p class='whitetext padding-vertical' id="welcometextsmall">
+					Die beste Methode um Programmieren zu lernen ist durch die Arbeit an einem Projekt.
+					Wir wollen euch eine Plattform bieten um euch mit anderen Neueinsteigern zu verbinden.
+				</p>
+				<button class='btn btn-lightgreen'>Jetzt Registrieren</button>
+			</section>
+			<img src="./assets/undraw_outer_space_re_u9vd.svg" alt="CountingStarsSVG" class='image' id="rocket">
+		</div>
+
+		<div class='divide steps-two-sides'>
+			<aside class="container-steps">
+					<div onclick='changetexttostep1()' class="btn-steps active">
+						<p class="reposition-text whitetext">Schritt 1</p>
+					</div>
+					<div class="steps-divider"></div>
+					<div onclick='changetexttostep2()' class="btn-steps">
+						<p class="reposition-text whitetext">Schritt 2</p>
+					</div>
+					<div class="steps-divider"></div>
+					<div onclick='changetexttostep3()' class="btn-steps">
+						<p class="reposition-text whitetext">Schritt 3</p>
+					</div>
+			</aside>
+
+			<section id="transition_container" class='container padding-horizontal2 align-left'>
+				<h2 id="stepsheader" class='whiteheader'>Schritt 1: Registiere dich</h2>
+				<p id="stepsbodytext" class='whitetext padding-vertical'>
+					Um einem Projekt beizutreten solltest du dir ein Profil erstellen.
+					Erstelle dir deinen individuellen Benutzernamen und ein sicheres Passwort,
+					noch ein paar Angaben zu dir und los gehts!
+				</p>
+				<button id="stepsbutton" type='submit' class='btn btn-green'>Registieren</button>
+			</section>
+		</div>
+
+		<div class='divide align-center-flex'>
+			<img src='./assets/working_remotely_.svg' alt='' class='image padding-horizontal3'>
+			<br>
+			<section class='padding-horizontal3'>
+				<h2 class='whiteheader'>
+					All das bequem von Zuhause!</h2>
+				<p class='whitetext padding-vertical'>
+					Finde dein Projekt und lerne die unbegrenzte Welt der Programmierung kennen.
+					Ob Front End oder Back End, hier findest du für deine Interessen ein Projekt.
+					Und wenn es noch keines gibt, kannst du dir einfach ein eigenes erstellen und
+					dich mit anderen dafür zusammenschließen.
+				</p>
+				<button type='submit' class='btn btn-green'>Projekte finden</button>
+			</section>
+		</div>
+
+		<div class='divide two-sides-even'>
+			<aside class='padding-all align-all'>
+				<img src='./assets/collaboration.svg' alt='' class='image'>
+			</aside>
+
+			<section class='container padding-horizontal align-left'>
+				<h2 class='whiteheader'>
+					Learn and grow together!</h2>
+				<p class='whitetext padding-vertical'>
+					Zusammen lernt und arbeitet es sich am besten. Jeder hat seine eigenen Stärken
+					und Schwächen, so kann man sich gegenseitig unterstützen und aneinander wachsen.
+				</p>
+				<button type='submit' class='btn btn-green'>Projekte finden</button>
+			</section>
+		</div>
+	</main>
+	<footer class='footer'>
+		<div class="waves"></div>
+		<div class='socialspace'>
+			<div class='social-container dark'>
+				<span><i class='fab fa-instagram'></i></span>
+				<div class='tooltip'>Instagram</div>
+			</div>
+			<div class='social-container dark'>
+				<span><i class='fab fa-twitter'></i></span>
+				<div class='tooltip'>Twitter</div>
+			</div>
+			<div class='social-container dark'>
+				<span><i class='fab fa-discord'></i></span>
+				<div class='tooltip'>Discord</div>
+			</div>
+			<div class='social-container dark'>
+				<span><i class='fab fa-github'></i></span>
+				<div class='tooltip'>GitHub</div>
+			</div>
+		</div>
+		<ul class='row-footer'>
+			<li><a href='#'>Impressum</a></li>
+			<li><a href='#'>Rechtliches</a></li>
+			<li><a href='#'>Hilfe</a></li>
+			<li><a href='./html/aboutus.html'>Unser Team</a></li>
+		</ul>
+		<div class='footerendpadding blacksmalltext'>© 2022 CypherNexus</div>
+	</footer>
+	<script src="./js/javascript.js"></script>
+</body>
+<script src="./js/javascript.js" charset="utf-8"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='https://kit.fontawesome.com/5a49021eb8.js' crossorigin="anonymous"></script>
+</html>

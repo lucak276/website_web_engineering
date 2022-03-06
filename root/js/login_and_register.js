@@ -7,10 +7,6 @@ function login() {
     let userfromlist = 'tobi'
     let passwordfromlist = 'homogeil'
 
-    var wrong_password_text = document.getElementById("wrong-password-text");
-    var wrong_user_text = document.getElementById("wrong-user-text");
-    var glass_container = document.getElementById("glasscontainer-login")
-
     console.log(username);
     console.log(password);
     
@@ -20,188 +16,104 @@ function login() {
     }
 
     else if (password.length <= 0 && username.length <= 0) {
-        glass_container.classList.add('shake-container-red')
-        setTimeout(function () {
-            glass_container.classList.remove('shake-container-red')
-          }, 1000);
+        ErrorMessage('Bitte gib deinen Nutzernamen und Passwort ein', "Login")
     }
 
-    else if (username.length > 0 && password.lenth > 0 && password !== passwordfromlist && username !== userfromlist) {
-        glass_container.classList.add('shake-container-red')
-        setTimeout(function () {
-            glass_container.classList.remove('shake-container-red')
-          }, 1000);
+    else if (username.length > 0 && username !== userfromlist) {
+        ErrorMessage('Dieser Nutzer scheint nicht zu existieren', "Login");
     }
 
-    else if (username !== userfromlist) {
-        console.log('Falscher Username');
-        wrong_user_text.classList.remove('remove');
-        glass_container.classList.add('shake-container-red');
-        setTimeout(function () {
-            glass_container.classList.remove('shake-container-red')
-          }, 1000);
-    }
-
-    else if (password !== passwordfromlist){
-        console.log('Falsches Passwort');
-        wrong_password_text.classList.remove('remove');
-        glass_container.classList.add('shake-container-red');
-        setTimeout(function () {
-            glass_container.classList.remove('shake-container-red')
-          }, 1000);
+    else if (password.length > 0 && password !== passwordfromlist){
+        ErrorMessage('Dein Passwort scheint nicht richtig zu sein', "Login")
     }
 
     else{
-        console.log('Ein Fehler ist aufgetreten')
-    }
-
-    /*
-    let savedUserString = window.localStorage.getItem(`this.${username}`);
-    try {
-      let savedUserObject = JSON.parse(savedUserString)
-  
-      if (savedUserObject.password === password) {
-        // Login successfull
-        setError("");
-        window.localStorage.setItem("auth.user", savedUserString);
-        setSuccess("Sie sind erfolgreich eingeloggt und werden gleich weitergeleitet!");
-        setTimeout(() => {
-          window.location.href = window.location.href.replace("login", "index");
-        }, 3000);
-      } else {
-        // Login false
-        setError("Das Passwort ist nicht korrekt!")
-        console.log(savedUserObject.password)
-      }
-    } catch (er) {
-      setError("Der Benutzer konnte nicht gefunden werden.")
-    }
-    */
-  }
-
-
-function setError(errorText) {
-    if (typeof errorText === "string") {
-        /*
-        transition_container.classList.add('fade-in');
-        transition_container.classList.remove('hide');
-        */
-      document.getElementById("Error").innerHTML = errorText;
-    } else {
-      document.getElementById("Error").innerHTML = "Something is not correct!";
+        ErrorMessage('Ein unbekannter Fehler ist aufgetreten', "Login")
     }
   }
+
+function ErrorMessage(error, registerorloginpage) {
+    if (registerorloginpage == "Login") {
+        var wrong_password_text = document.getElementById("error-text");
+        var glass_container = document.getElementById("glasscontainer-login")
+
+        wrong_password_text.classList.remove("remove")
+        wrong_password_text.innerHTML = error;
+        glass_container.classList.add('shake-container-red');
+        setTimeout(function () {
+            glass_container.classList.remove('shake-container-red')
+          }, 1000);
+    }
+    else if (registerorloginpage == "Register") {
+        var wrong_password_text = document.getElementById("error-text-register");
+        var glass_container = document.getElementById("glasscontainer-register");
+
+        wrong_password_text.classList.remove("remove")
+        wrong_password_text.innerHTML = error;
+        glass_container.classList.add('shake-container-red');
+        setTimeout(function () {
+            glass_container.classList.remove('shake-container-red')
+          }, 1000);
+    }
+}
   
 
   /* Register */
-
-  function setError(errorText) {
-    if (typeof errorText === "string") {
-      document.getElementById("Error").innerHTML = errorText;
-    } else {
-      document.getElementById("Error").innerHTML = "Something is not correct!";
-    }
-  }
-  
-  function setSuccess(successText) {
-    if (typeof successText === "string") {
-      document.getElementById("Success").innerHTML = successText;
-    } else {
-      document.getElementById("Success").innerHTML = "Login erfolgreich.";
-    }
-  }
-  
   function register() {
     // Check user info
-    let firstname = document.getElementById("Vorname").value;
-    if (! firstname.match("^[a-zA-Z\-_]+$")) {
-      setError("Der Vorname darf nur aus Groß- und Kleinbuchstaben und einem '-' oder '_' bestehen.");
-      return;
-    } else if (firstname.length > 20) {
-      setError("Der Vorname darf maximal 20 Zeichen lang sein.");
-      return;
-    }
-    let lastname = document.getElementById("Nachname").value;
-    if (! lastname.match("^[a-zA-Z\-_]+$")) {
-      setError("Der Nachname darf nur aus Groß- und Kleinbuchstaben und einem '-' oder '_' bestehen.");
-      return;
-    } else if (lastname.length > 20) {
-      setError("Der Nachname darf maximal 20 Zeichen lang sein.");
-      return;
-    }
-    let username = document.getElementById("Benutzername").value;
-    if (! username.match("^[a-zA-Z\-_]+$")) {
-      setError("Der Benutzername darf nur aus Groß- und Kleinbuchstaben und einem '-' oder '_' bestehen.");
-      return;
-    } else if (username.length > 20) {
-      setError("Der Benutzername darf maximal 20 Zeichen lang sein.");
-      return;
-    }
-    let password = document.getElementById("Passwort").value;
-    if (! password.match("^[a-zA-Z!#,+\-_?0-9]+$") || ! password.match(".*[0-9].*") || ! password.match(".*[!#,+\-_?].*")) {
-      setError("Das Passwort darf nur aus Groß- und Kleinbuchstaben, sowie mindestens einer Zahl und einem der folgenden Zeichen bestehen: '!#,+-_?'.");
-      return;
-    } else if (password.length < 8 || password.length > 20) {
-      setError("Das Passwort muss mindestens 8 und maximal 20 Zeichen lang sein.");
-      return;
-    }
-    // Check gender
+    let reg_firstname = document.getElementById("register_firstname").value;
+    let reg_secondname = document.getElementById("register_secondname").value;
+    let reg_username = document.getElementById("register_username").value;
+    let reg_password= document.getElementById("register_password").value;
+    let reg_passwordrep = document.getElementById("register_password_repetition").value;
+
     let gender = "";
-    let isMale = document.getElementById("Maennlich").checked;
-    let isFemale = document.getElementById("Weiblich").checked;
-    let isDivers = document.getElementById("Divers").checked;
-    if (isMale && !isFemale && !isDivers) {
-      gender = "Männlich";
-    } else if (!isMale && isFemale && !isDivers) {
-      gender = "Weiblich";
-    } else if (!isMale && !isFemale && isDivers) {
-      gender = "Divers";
-    } else {
-      setError("Bitte wählen sie genau EIN geschlecht aus!");
-      return;
+    let checkedman = document.getElementById("man_checkbox").checked;
+    let checkedwomen = document.getElementById("women_checkbox").checked;
+    let checkeddivers = document.getElementById("divers_checkbox").checked;
+
+    let checkedterms = document.getElementById("terms_checkbox").checked;
+
+    if (reg_firstname.length < 1 || reg_secondname < 1) {
+        ErrorMessage("Sie benötigen einen Vor- und Nachnamen", "Register")
     }
-    // Check interests
-    let interestOne = document.getElementById("Interesse1").checked;
-    let interestTwo = document.getElementById("Interesse2").checked;
-    let interestThree = document.getElementById("Interesse3").checked;
-    // Check comment
-    let comment = document.getElementById("kommentar").value;
-    if (comment.length > 100) {
-      setError("Es sind maximal 100 Zeichen im Kommentar erlaubt!");
-      return;
+
+    else if (reg_username.length <= 0) {
+        ErrorMessage("Sie benötigen einen Nutzernamen", "Register")
     }
-    // Check agreement
-    let agreement = document.getElementById("nutzungsbedingung").checked;
-    if (!agreement) {
-      setError("Sie müssen die Nutzungsbedingungen akzeptieren!");
-      return;
+
+    else if (reg_password.length < 8) {
+        ErrorMessage("Ihr Passwort benötigt eine Mindestlänge von 8 Zeichen", "Register")
+    }
+
+    else if (reg_password ==! reg_passwordrep) {
+        ErrorMessage("Ihre eingegebenen Passwörter sind nicht dasselbe", "Register")
     }
     
-    console.log("Every input is correct");
-  
-    // Check user already exist
-    let existingUser = window.localStorage.getItem(`this.${username}`);
-    if (existingUser !== null) {
-      setError("Der Benutzer existiert bereits, bitte ändern Sie ihren Benutzernamen!");
-      return;
+    else if (checkedman && !checkedwomen && !checkeddivers) {
+        gender = "Männlich";
     }
-  
-    let jsonUser = JSON.stringify({
-      firstname: firstname,
-      lastname: lastname,
-      username: username,
-      password: password,
-      gender: gender,
-      interestOne: interestOne,
-      interestTwo: interestTwo,
-      interestThree: interestThree,
-      comment: comment,
+    else if (!checkedman && checkedwomen && !checkeddivers) {
+        gender = "Weiblich";
+    }
+    else if (!checkedman && !checkedwomen && checkeddivers) {
+        gender = "Divers";
+    }
+    else if (!checkedman && !checkedwomen && !checkeddivers) {
+        ErrorMessage("Bitte wählen Sie ein Geschlecht aus", "Register");
+    }
+    else if (!checkedterms) {
+        ErrorMessage("Die Nutzungsbedingungen sind ein Pflichtfeld", "Register")
+    }
+    else {
+        ErrorMessage("Bitte geben Sie Ihre Daten ein", "Register");
+    }
+
+    let UserModel = JSON.stringify({
+        firstname: reg_firstname,
+        lastname: reg_secondname,
+        username: reg_username,
+        password: reg_password,
+        gender: gender,
     })
-  
-    window.localStorage.setItem(`this.${username}`, jsonUser)
-    setError("");
-    setSuccess("Hallo " + firstname + " " + lastname + " ,die Registrierung war erfolgreich, sie werden gleich weitergeleitet!");
-    setTimeout(() => {
-      window.location.href = window.location.href.replace("register", "login");
-    }, 3000)
   }

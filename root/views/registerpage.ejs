@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>CypherNexus</title>
+  <link rel='stylesheet' type='text/css' href='../css/loginstyle.css'>
+  <link rel='stylesheet' type='text/css' href='../css/loginstyle_responsive.css'>
+  <link rel='stylesheet' type='text/css' href="../css/style.css">
+  <meta charset='UTF-8'>
+  <meta name="description" content="Loginform, Registerform, Registrierungsformular, Loginformular">
+  <meta name="keywords" content="Login, Register, Registrieren, Anmelden, Anmeldung">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <link rel="favicon" type="image/x-icon" href="favicon.ico">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src='https://kit.fontawesome.com/5a49021eb8.js' crossorigin="anonymous"></script>
+  <script src="../js/login_and_register.js" charset="utf-8"></script>
+</head>
+
+<body>
+<main>
+  <div class='two-sides-even2'>
+    <aside class='container-center align-left'>
+      <div class='paddingleft'>
+        <h1 class='padding-vertical leftsidetext blacktext'>Willkommen im CypherNexus!</h1>
+        <img src='../assets/login_page_character.svg' alt='' class='left-side-image'>
+        <h3 class='padding-vertical leftsidetext blacktext'>Wir bilden die Brücke zwischen dir und anderen lernbegierigen Tech-Einsteigern! Du hast bereits ein Konto?</h3>
+        <a href ='/login'><button class='btn btn-darkblue'>jetzt einloggen</button></a>
+      </div>
+    </aside>
+
+    <div class='container-center'>
+      <div class='container-login glass' id="glasscontainer-register">
+        <form class='container-center signin-signup' action="/register" method="post">
+          <h2 class='padding-vertical whiteheader'>Registrieren</h2>
+          <div class='input-field'>
+            <i class='fas fa-user'></i>
+            <input id="register_firstname" name="firstname" type='text' placeholder='Vorname (max. 20 Zeichen)' maxlength='20' required/>
+          </div>
+          <div class='input-field'>
+            <i class='fas fa-user'></i>
+            <input id="register_secondname" name="secondname" type='text' placeholder='Nachname (max. 20 Zeichen)' maxlength='20' required/>
+          </div>
+          <div class='input-field'>
+            <i class='fas fa-user'></i>
+            <input id="register_username" name="username" type='text' placeholder='Username (max. 20 Zeichen)' maxlength='20' required/>
+          </div>
+          <div class='input-field'>
+            <i class='fas fa-lock'></i>
+            <input id="register_password" name="password" type='password' placeholder='Passwort (8-20 Zeichen) ' minlength='8' maxlength="20" required/>
+          </div>
+          <div class='input-field'>
+            <i class='fas fa-lock'></i>
+            <input id="register_password_repetition" name="password2" type='password' placeholder='Passwort wiederholen' minlength='8' maxlength="20" required/>
+
+          </div>
+          <div class='container-rememberradiobox'>
+            <input type='radio' id='man_checkbox' name='rememberradiobox'>
+            <label for='men_checkbox'>Männlich</label>
+            <input type='radio' id='women_checkbox' name='rememberradiobox'>
+            <label for='women_checkbox'>Weiblich</label>
+            <input type='radio' id='divers_checkbox' name='rememberradiobox'>
+            <label for='divers_checkbox'>Divers</label>
+          </div>
+          <div class='container-remembercheckbox'>
+            <input type='checkbox' id='terms_checkbox' class='remembercheckbox' value='remember'>
+            <label for='termsofservice'>Ich akzeptiere die Nutzungsbedingungen</label>
+          </div>
+          <div class="small-text padding-vertical red remove" id="error-text-register"></div>
+          <button type="submit" onclick="register()" class='btn btn-lightgreen'>Registrieren</button>
+        </form>
+      </div>
+      <div class='left-right-text'>Bereits registiert?
+        <a href ='/login'>Hier anmelden</a></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
