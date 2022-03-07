@@ -107,10 +107,12 @@ async function validateRegister(username, password, termsofservice, done){
 	if (!termsofservice){
 		return done(null, false, {message: 'Sie müssen Nutzungsbedingungen akzeptieren'})
 	}
-	if (user != null) {
-		return done(null, false, {message: 'That username does already exist'})
+	try{
+		if (user != null) {
+			return done(null, false, {message: 'That username does already exist'})}
+	} catch(error){
+		return done(error)
 	}
-	elif ()
 }
 
 
