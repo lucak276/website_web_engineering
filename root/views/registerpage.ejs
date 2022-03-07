@@ -49,22 +49,17 @@
             <i class='fas fa-lock'></i>
             <input id="register_password" name="password" type='password' placeholder='Passwort (8-20 Zeichen) ' minlength='8' maxlength="20" required/>
           </div>
-          <div class='input-field'>
-            <i class='fas fa-lock'></i>
-            <input id="register_password_repetition" name="password2" type='password' placeholder='Passwort wiederholen' minlength='8' maxlength="20" required/>
-
-          </div>
           <div class='container-rememberradiobox'>
-            <input type='radio' id='man_checkbox' name='rememberradiobox'>
+            <input type='radio' class='remembercheckbox' id='man_checkbox' name='rememberradiobox', value="male">
             <label for='men_checkbox'>Männlich</label>
-            <input type='radio' id='women_checkbox' name='rememberradiobox'>
+            <input type='radio' class='remembercheckbox' id='women_checkbox' name='rememberradiobox', value="female">
             <label for='women_checkbox'>Weiblich</label>
-            <input type='radio' id='divers_checkbox' name='rememberradiobox'>
+            <input type='radio' class='remembercheckbox' id='divers_checkbox' name='rememberradiobox', value="divers", checked>
             <label for='divers_checkbox'>Divers</label>
           </div>
           <div class='container-remembercheckbox'>
-            <input type='checkbox' id='terms_checkbox' class='remembercheckbox' value='remember'>
-            <label for='termsofservice'>Ich akzeptiere die Nutzungsbedingungen</label>
+            <input type='checkbox' id='terms_checkbox' class='remembercheckbox' name="termsofservice" value='1', checked>
+            <label for='chekcbox'>Ich akzeptiere die Nutzungsbedingungen</label>
           </div>
           <div class="small-text padding-vertical red remove" id="error-text-register"></div>
           <button type="submit" onclick="register()" class='btn btn-lightgreen'>Registrieren</button>

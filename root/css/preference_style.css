@@ -11,7 +11,7 @@ body {
   overflow-y: scroll;
 }
 
-.container-p {
+.pContainer {
   width:100%;
   height: 100vh;
   padding-left: 8%;
@@ -21,31 +21,23 @@ body {
     url(../assets/matrix.jpg);
 }
 
-.container-c {
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0));
-    backdrop-filter: blur(10.0px);
-    -webkit-backdrop-filter: blur(20.0px);
-    border: 1.0px solid rgba(255, 255, 255, 0.20);
-    border-radius: 20.0px;
-    box-shadow: 0 10.0px 20.0px 0 rgba(0, 0, 0, 0.20);
-    padding-top:  8%;
-    height: 80%;
-    background-color: inherit;
+.container_c {
+  padding-top:  4%;
+  height: 80%;
+  background-color: inherit;
 }
 
-.container-c h1 {
-    padding-bottom: 3%;
-    text-align: center;
-    font-size: 2em;
+.container_c h1 {
+padding-bottom: 3%;
+text-align: center;
+font-size: 2em;
     color: white;
-    opacity: 0.8;
 }
 
 .content {
   padding: 2%;
 }
-
-#discover-list {
+#discover_list {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -53,7 +45,6 @@ body {
     margin-left: 2%;
     margin-right: 2%;
 }
-
 #pref-submit{
     align-items: center;
     text-align: center;
@@ -69,29 +60,27 @@ body {
     margin-bottom: 1%;
     padding: 1% 1%;
     border: 1px solid rgba(22, 24, 35, 0.2);
-    border-radius: 20px;
+    border-radius: 20%;
     margin-right: 2%;
     background-color: rgba(20,27,41,0.6);
-    color: #ffffff;
+     color: #C0F7B7;
 
 
 }
 
-.pref-container{
+.pref_container{
+
 }
 
 .chosen {
-    color: #5AC994;
-    opacity: 0.8;
+    color: #C0F7B7;
+}
+.prefBtn .chosen {
+    color: #C0F7B7;
 }
 
-.btn-pref .chosen {
-    color: #5AC994;
-    opacity: 0.8;
-}
-
-.btn-pref {
-    float: left;
+.prefBtn {
+    float: right;
     display: flex;
     box-sizing: border-box;
     width: fit-content;
@@ -105,4 +94,7 @@ body {
     margin-left: 8px;
     background-color: rgba(20,27,41,0.6);
     color: #fff;
+}
+
+#Python {
 }

@@ -1,5 +1,5 @@
-ErrorDocument 404 /html/404_page.html
-ErrorDocument 403 /html/403_page.html
-ErrorDocument 401 /html/401_page.html
-ErrorDocument 500 /html/500_page.html
-ErrorDocument 405 /html/405_page.html
+ErrorDocument 404 /views/404_page.html
+ErrorDocument 403 /views/403_page.html
+ErrorDocument 401 /views/401_page.html
+ErrorDocument 500 /views/500_page.html
+ErrorDocument 405 /views/405_page.html
