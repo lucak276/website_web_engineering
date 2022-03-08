@@ -36,18 +36,12 @@
     justify-content: center;
     height: 100%;
     cursor: pointer;
-    background: rgba(20, 27, 41, 1);
+    background: rgb(22, 30, 46);
     box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.1);
     text-align: center;
     border-radius: 20px;
 }
 
-.form-element .title{
-    font-size:18px;
-    color: #5ac994;
-    font-weight: 400;
-    padding: 5px 0px;
-}
 
 
 .form-element input:checked + label:before {
