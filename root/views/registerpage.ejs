@@ -30,38 +30,44 @@
     </aside>
 
     <div class='container-center'>
-      <div class='container-login glass' id="glasscontainer-register">
-        <form class='container-center signin-signup' action="/register" method="post">
+      <% if(typeof errorMessage !== "undefined"){ %>
+        <div class='container-login glass shake-container-red' id="glasscontainer-register">
+      <% } else{ %>  
+        <div class='container-login glass' id="glasscontainer-register">
+      <% } %>
+        <form class='container-center signin-signup' action="/register" method="post", autocomplete="off">
           <h2 class='padding-vertical whiteheader'>Registrieren</h2>
           <div class='input-field'>
             <i class='fas fa-user'></i>
-            <input id="register_firstname" name="firstname" type='text' placeholder='Vorname (max. 20 Zeichen)' maxlength='20' required/>
+            <input id="register_firstname" pattern="^[a-zA-ZäÄöÖüÜ0-9]+$" name="firstname" type='text' placeholder='Vorname (max. 20 Zeichen)' maxlength='20' required/>
           </div>
           <div class='input-field'>
             <i class='fas fa-user'></i>
-            <input id="register_secondname" name="secondname" type='text' placeholder='Nachname (max. 20 Zeichen)' maxlength='20' required/>
+            <input id="register_secondname" pattern="^[a-zA-ZäÄöÖüÜ0-9]+$" name="secondname" type='text' placeholder='Nachname (max. 20 Zeichen)' maxlength='20' required/>
           </div>
           <div class='input-field'>
             <i class='fas fa-user'></i>
-            <input id="register_username" name="username" type='text' placeholder='Username (max. 20 Zeichen)' maxlength='20' required/>
+            <input id="register_username" pattern="^[a-zA-Z0-9]+$" name="username" type='text' placeholder='Username (max. 20 Zeichen)' maxlength='20' required/>
           </div>
           <div class='input-field'>
             <i class='fas fa-lock'></i>
             <input id="register_password" name="password" type='password' placeholder='Passwort (8-20 Zeichen) ' minlength='8' maxlength="20" required/>
           </div>
           <div class='container-rememberradiobox'>
-            <input type='radio' class='remembercheckbox' id='man_checkbox' name='rememberradiobox', value="male">
+            <input type='radio' class='remembercheckbox' id='man_checkbox' name='rememberradiobox', value="male" checked>
             <label for='men_checkbox'>Männlich</label>
             <input type='radio' class='remembercheckbox' id='women_checkbox' name='rememberradiobox', value="female">
             <label for='women_checkbox'>Weiblich</label>
-            <input type='radio' class='remembercheckbox' id='divers_checkbox' name='rememberradiobox', value="divers", checked>
+            <input type='radio' class='remembercheckbox' id='divers_checkbox' name='rememberradiobox', value="divers",>
             <label for='divers_checkbox'>Divers</label>
           </div>
           <div class='container-remembercheckbox'>
-            <input type='checkbox' id='terms_checkbox' class='remembercheckbox' name="termsofservice" value='1', checked>
+            <input type='checkbox' id='terms_checkbox' class='remembercheckbox' name="termsofservice" checked>
             <label for='chekcbox'>Ich akzeptiere die Nutzungsbedingungen</label>
           </div>
-          <div class="small-text padding-vertical red remove" id="error-text-register"></div>
+          <% if(typeof errorMessage !== "undefined") { %>
+            <div class="small-text padding-vertical red" id="error-text-register"><%= errorMessage %></div>
+          <% } %>
           <button type="submit" onclick="register()" class='btn btn-lightgreen'>Registrieren</button>
         </form>
       </div>

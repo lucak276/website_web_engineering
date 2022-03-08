@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config()
 }
 
@@ -10,13 +10,17 @@ const passport = require('passport');
 const flash = require('express-flash')
 const session = require('express-session');
 const LocalStrategy = require('passport-local').Strategy
-const bcrypt = require('bcrypt')
+//used as a encryption tool for passwords
+const bcrypt = require('bcrypt');
+const req = require('express/lib/request');
+//json file with all of our userdata used for saving our users
+//(can later be changed to MongoDB and realized with the mongoose package)
+var userdata = require('./userdata.json');
 
 server.use("/css", express.static(path.join(__dirname, "css")));
 server.use("/assets", express.static(path.join(__dirname, "assets")));
 server.use("/pages", express.static(path.join(__dirname, "views")));
 server.use("javascript", express.static(path.join(__dirname, "js")));
-
 server.use(flash())
 server.use(session({
 	secret: process.env.SESSION_SECRET,
@@ -25,11 +29,9 @@ server.use(session({
 }))
 server.use(passport.initialize())
 server.use(passport.session())
+//Our server is listening on localhost port 3000 (Nginx Server on Port 81)
 server.listen(3000)
-server.use(express.urlencoded({extended: false}));
-//saving users locally in json file (not production ready since one should use a server for that
-//can be realized with MongoDB and mongoose package
-const users = []
+server.use(express.urlencoded({ extended: false }));
 
 //call for initializing user
 initialize();
@@ -44,6 +46,7 @@ server.get('/', (req, res) => {
 })
 
 //loginpage 
+//isNOtAuth noch adden hier und für register
 server.get('/login', (req, res) => {
 	res.render('loginpage.ejs');
 })
@@ -63,7 +66,7 @@ server.get('/preferences', isAuth, (req, res) => {
 server.get('aboutus', (req, res) => {
 	res.render('aboutus.ejs')
 })
-  
+
 //registerpage
 server.get('/register', (req, res) => {
 	res.render('registerpage.ejs');
@@ -72,96 +75,106 @@ server.get('/register', (req, res) => {
 server.post('/register', async (req, res) => {
 	let id = Date.now().toString();
 	let firstname = req.body.firstname;
-	let secondname= req.body.secondname;
+	let secondname = req.body.secondname;
 	let username = req.body.username;
 	const bcryptpassword = await bcrypt.hash(req.body.password, 10);
 	let gender = req.body.rememberradiobox;
 	let termsofservice = req.body.termsofservice;
+	const user = userdata.find(user => user.username === username);
 
-	try {
-	  users.push({
-		firstname: firstname,
-		gender: gender,
-		secondname: secondname,
-		username: username,
-		password: bcryptpassword,
-		id: id,
-	  })
-	  console.log("Erfolgreich Account angelegt");
-	  console.log(users);
-	  res.redirect('/login')
-	} catch(error) {
-	  res.redirect('/register')
+	if (!termsofservice) {
+		return res.render("registerpage.ejs", {
+			errorMessage: 'Sie müssen die Nutzungsbedingungen akzeptieren'
+		});
 	}
-  })
+	else{
+		try {
+			if (user != null) {
+				return res.render("registerpage.ejs", {
+					errorMessage: 'Ein Nutzer mit diesem Usernamen existiert bereits'
+				});
+			}
+			else {val_username = username}
+	
+			userdata.push({
+				firstname: firstname,
+				gender: gender,
+				secondname: secondname,
+				username: val_username,
+				password: bcryptpassword,
+				id: id,
+			})
+			console.log("Erfolgreich Account angelegt");
+			console.log(userdata);
+			res.redirect('/login')
+		} catch (error) {
+			res.redirect('/register')
+		}
+	}
+})
+
+//RETURN DONE in req.flash('error_msg'. 'message') oder sowas umbenennen!
+
+
+//lookup the current user for login inside json file and give out error message if password or username is wrong
+async function validateLogin(username, password, done) {
+	const user = userdata.find(user => user.username === username);
+	if (user == null) {
+		//if there is no such user display an error message (errotext is shown in registerpage.ejs)
+		return done(null, false, {
+			message: 'Dieser Nutzer existiert nicht'
+		})
+	}
+	try {
+		if (await bcrypt.compare(password, user.password)) {
+			return done(null, user)
+		} else {
+			//if the password is wrong display an error message (errotext is shown in registerpage.ejs)
+			return done(null, false, {
+				message: 'Falches Passwort. Bitte versuche es erneut.'
+			})
+		}
+	} catch (error) {
+		return done(null, false, {
+			message: 'Es ist ein unerwarteter Fehler aufgetreten. Versuche es später erneut'
+		})
+	}
+}
+
+
+//Inititalize Userlogin
+//Umbedingt abändenr von der logik
+function initialize() {
+	var user = validateLogin
+	passport.use(new LocalStrategy({ usernameField: 'username' }, user))
+	passport.serializeUser((user, done) => done(null, user.id))
+	passport.deserializeUser((id, done) => {
+		return done(null, userdata.find(user => user.id === id))
+	})
+}
+
+
+//checking if User is Authenticated
+//used for the case that the user isn't authenticated yet and if so making him unable to visit pages
+function isAuth(req, res, next) {
+	if (req.isAuthenticated()) {
+		return next()
+	}
+	res.redirect('/login')
+}
+
+
+//used for the case that user is already authenticated for example making him unable to go back to the login page
+function isNotAuth(req, res, next) {
+	if (req.isAuthenticated()) {
+		return res.redirect('/')
+	}
+	next()
+}
+
 
 //Logout
 server.delete('/logout', (req, res) => {
 	req.logOut()
 	res.redirect('/login')
 })
-
-//check if account can be created and if everything looks fine
-async function validateRegister(username, password, termsofservice, done){
-	const user = users.find(user => user.username === username);
-	if (!termsofservice){
-		return done(null, false, {message: 'Sie müssen Nutzungsbedingungen akzeptieren'})
-	}
-	try{
-		if (user != null) {
-			return done(null, false, {message: 'That username does already exist'})}
-	} catch(error){
-		return done(error)
-	}
-}
-
-
-//lookup the current user for login inside json file and give out error message if password or username is wrong
-async function valdiateLogin(username, password, done){
-	const user = users.find(user => user.username === username);
-	if (user == null) {
-		//if there is no such user display error message (errotext is shown in registerpage.ejs)
-		return done(null, false, {message: 'Dieser Nutzer existiert nicht'})
-	}
-	try {
-		if (await bcrypt.compare(password, user.password)) {
-		return done(null, user)
-		} else {
-		//if the password is wrong display error message (errotext is shown in registerpage.ejs)
-		return done(null, false, {message: 'Falches Passwort. Bitte versuche es erneut.'})
-		}
-	} catch (error) {
-		return done(error)
-	}
-}
-
-//Inititalize Userlogin
-//Umbedingt abändenr von der logik
-function initialize() {
-	var user = valdiateLogin
-	passport.use(new LocalStrategy({usernameField: 'username'}, user))
-	passport.serializeUser((user, done) => done(null, user.id))
-	passport.deserializeUser((id, done) => {
-	return done(null, users.find(user => user.id === id))
-	})
-}
-
-
-//checking if User is Authenticated
-
-//used for the case that the user isn't authenticated yet and making him unable to visit pages which
-//he isn't allowed to visit
-function isAuth(req, res, next) {
-	if (req.isAuthenticated()) {
-	  return next()
-	}
-	res.redirect('/login')
-  }
-
-//used for the case that user is already authenticated and making him unable to go back to the login page
-function isNotAuth(req, res, next) {
-if (req.isAuthenticated()) {
-	return res.redirect('/')
-}
-next()
-}

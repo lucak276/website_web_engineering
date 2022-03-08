@@ -32,19 +32,23 @@
 			</aside>
 
 			<main class='container-center'>
-				<div class='container-login glass' id="glasscontainer-login">
-					<form class='container-center signin-signup' action="/login" method="post">
+				<% if(typeof messages.error !== "undefined"){ %>
+					<div class='container-login glass shake-container-red' id="glasscontainer-login">
+				  <% } else{ %>  
+					<div class='container-login glass' id="glasscontainer-login">
+				  <% } %>
+					<form class='container-center signin-signup' action="/login" method="post", autocomplete="off">
 						<h2 class='padding-vertical2 whiteheader'>Login</h2>
 						<div class='input-field'>
 							<i class='fas fa-user'></i>
-							<input id='usernameinput' name='username' type='username' placeholder='Username' />
+							<input id='usernameinput' pattern="^[a-zA-Z0-9]+$" name='username' type='username' placeholder='Username' />
 						</div>
 						<div class='input-field'>
 							<i class='fas fa-lock'></i>
 							<input id='passwordinput' name='password' type='password' placeholder='Password'
 								minlength='8' required />
 						</div>
-						<% if(messages.error) { %>
+						<% if(typeof messages.error !== "undefined") { %>
 							<div class="small-text padding-vertical red" id="error-text"><%= messages.error %></div>
 						<% } %>
 						<div class='container-remembercheckbox'>
@@ -57,6 +61,7 @@
 							<a href='./register'> Jetzt registieren</a>
 						</div>
 						<div class='small-text padding-vertical'>Oder melden Sie sich mit Platformen an</div>
+						<!-- Currently only an design choice, functionality of google sign-in etc. can be added later on-->
 						<div class='socialspace'>
 							<div class='social-container light'>
 								<span><i class='fab fa-facebook-f'></i></span>
