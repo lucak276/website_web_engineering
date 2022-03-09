@@ -1,7 +1,3 @@
-
-
-
-
 .container-preferences{
     position: absolute;
     top: 10%;
@@ -42,23 +38,9 @@
     border-radius: 20px;
 }
 
-
-
-.form-element input:checked + label:before {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.form-element input:checked + label .title {
-    color: #5ac994;
-    font-weight: bolder;
-}
-
 .form-element input:checked + label {
     border: 20px;
-}
-
-.form-element input:checked + label {
+    color: #5ac994;
+    font-weight: bolder;
     border: 8px solid #124143;    
-    ;
 }
