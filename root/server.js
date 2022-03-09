@@ -10,6 +10,7 @@ const passport = require('passport');
 const flash = require('express-flash')
 const session = require('express-session');
 const LocalStrategy = require('passport-local').Strategy
+const fs = require('fs')
 //used as a encryption tool for passwords
 const bcrypt = require('bcrypt');
 const req = require('express/lib/request');
@@ -47,7 +48,7 @@ server.get('/', (req, res) => {
 
 //loginpage
 //isNOtAuth noch adden hier und für register
-server.get('/login', (req, res) => {
+server.get('/login', isNotAuth, (req, res) => {
 	res.render('loginpage.ejs');
 })
 
@@ -56,6 +57,7 @@ server.post('/login', passport.authenticate('local', {
 	failureRedirect: '/login',
 	failureFlash: true
 }))
+
 
 //prefrencespage
 server.get('/preferences', isAuth, (req, res) => {
@@ -67,8 +69,33 @@ server.get('/aboutus', (req, res) => {
 	res.render('aboutus.ejs')
 })
 
+
+//impressum
+server.get('/impressum', (req, res) => {
+	res.render('aboutus.ejs')
+})
+
+
+//projectpage
+server.get('/projects', isAuth, (req, res) => {
+	res.render('projectsArt.ejs')
+})
+
+
+//projectpage
+server.get('/projects', isAuth, (req, res) => {
+	res.render('projects.ejs')
+})
+
+
+//createprojectpage
+server.get('/create', isAuth, (req, res) => {
+	res.render('createproject.ejs')
+})
+
+
 //registerpage
-server.get('/register', (req, res) => {
+server.get('/register', isNotAuth, (req, res) => {
 	res.render('registerpage.ejs');
 })
 
@@ -105,10 +132,13 @@ server.post('/register', async (req, res) => {
 				id: id,
 			})
 
+			fs.writeFileSync('./userdata.json', JSON.stringify(userdata, null, 2));
+
 			console.log("Erfolgreich Account angelegt");
 			console.log(userdata);
 			res.redirect('/login')
 		} catch (error) {
+			console.log(error)
 			res.redirect('/register')
 		}
 	}
