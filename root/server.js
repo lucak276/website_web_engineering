@@ -72,13 +72,13 @@ server.get('/aboutus', (req, res) => {
 
 //impressum
 server.get('/impressum', (req, res) => {
-	res.render('aboutus.ejs')
+	res.render('impressum.ejs')
 })
 
 
 //projectpage
 server.get('/projects', isAuth, (req, res) => {
-	res.render('projectsArt.ejs')
+	res.render('projects.ejs')
 })
 
 

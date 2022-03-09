@@ -1,13 +1,12 @@
 <header>
-    <ul>
+    <ul class="left-side">
     <img class="image-cnlogo" src="./assets/logo.svg"></img>
     <a href='/' class='CypherNexusLogo greenheader padding-left2'>CypherNexus</a>
     </ul>
-    <ul>
-        <li><a href="/root/index.html" class='active'>Home</a></li>
-        <li><a href="#">Nexus</a></li>
-        <li><a href="/aboutus">About&nbsp;Us</a></li>
-        <li><a method="POST" action="/logout?_method=DELETE" href="/">LogOut</a></li>
-        <li><a href="/login">Login</a></li>
-    </ul>
-</header>
+     <ul>
+         <li><a <%if(active=="Home"){%>class="active"<%}%> href="/root/index.html">Home</a></li>
+         <li><a <%if(active=="Nexus"){%>class="active"<%}%> href="#">Nexus</a></li>
+         <li><a <%if(active=="Login"){%>class="active"<%}%> href="/login">Login</a></li>
+         <li><a <%if(active=="Aboutus"){%>class="active"<%}%> href="/aboutus">About&nbsp;Us</a></li>
+     </ul>
+ </header>

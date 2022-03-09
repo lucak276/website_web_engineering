@@ -22,22 +22,9 @@
 </head>
 
 
-<header>
-    <div class="topnav" id="topnav">
-        <img src="" alt="logo" class="logo"/>
-        <div id="elAct" >
-            <nav>
-                <ul>
-                    <li><a  class="el" href="../html/aboutus.html">Projects</a></li>
-                    <li><a  class="el" href="../index.html">Home</a></li>
-                    <li><a  class="el" href="../html/">Forum</a></li>
-                    <li><a  class="el active" href="../html/">About Us</a></li>
-                    <li><a  class="el" href="../html/loginpage.html">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+
+<%- include('./header.ejs', {active: "Aboutus"}); %>
+
 
 <section class='divide aboutus'>
     <div class="whiteheader">
