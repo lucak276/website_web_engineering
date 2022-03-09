@@ -78,7 +78,7 @@ server.get('/impressum', (req, res) => {
 
 //projectpage
 server.get('/projects', isAuth, (req, res) => {
-	res.render('projectsArt.ejs')
+	res.render('projects.ejs')
 })
 
 
