@@ -4,8 +4,8 @@
     <a href='/' class='CypherNexusLogo greenheader padding-left2'>CypherNexus</a>
     </ul>
      <ul>
-        <li><a <%if(active=="Home"){%>class="active"<%}%> href="/root/index.html">Home</a></li>
-        <% if(messages.error) { %>
+        <li><a <%if(active=="Home"){%>class="active"<%}%> href="/">Home</a></li>
+        <% if(isAuth) { %>
             <li><a <%if(active=="Projects"){%>class="active"<%}%> href="/projects">Projects</a></li>
             <li><a <%if(active=="Create"){%>class="active"<%}%> href="/create">Create</a></li>
             <li><a <%if(active=="LogOut"){%>class="active"<%}%> action="POST" href="/">LogOut</a></li>

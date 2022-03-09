@@ -1,3 +1,4 @@
+//for using environment variables
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config()
 }
@@ -43,17 +44,21 @@ server.set('view-engine', 'ejs');
 
 //root is index.ejs
 server.get('/', (req, res) => {
-	res.render('index.ejs',);
+	res.render('index.ejs', {
+		isAuth: req.isAuthenticated,
+	});
 })
 
 //loginpage
 //isNOtAuth noch adden hier und für register
 server.get('/login', isNotAuth, (req, res) => {
-	res.render('loginpage.ejs');
+	res.render('loginpage.ejs',{
+		isAuth: req.isAuthenticated,
+	});
 })
 
 server.post('/login', passport.authenticate('local', {
-	successRedirect: '/preferences',
+	successRedirect: '/projects',
 	failureRedirect: '/login',
 	failureFlash: true
 }))
@@ -61,42 +66,56 @@ server.post('/login', passport.authenticate('local', {
 
 //prefrencespage
 server.get('/preferences', isAuth, (req, res) => {
-	res.render('preferences.ejs');
+	res.render('preferences.ejs',{
+		isAuth: req.isAuthenticated,
+	});
 })
 
 //aboutuspage
 server.get('/aboutus', (req, res) => {
-	res.render('aboutus.ejs')
+	res.render('aboutus.ejs',{
+		isAuth: req.isAuthenticated,
+	})
 })
 
 
 //impressum
 server.get('/impressum', (req, res) => {
-	res.render('impressum.ejs')
+	res.render('impressum.ejs',{
+		isAuth: req.isAuthenticated,
+	})
 })
 
 
 //projectpage
 server.get('/projects', isAuth, (req, res) => {
-	res.render('projects.ejs')
+	res.render('projects.ejs',{
+		isAuth: req.isAuthenticated,
+	})
 })
 
 
 //projectpage
 server.get('/projects', isAuth, (req, res) => {
-	res.render('projects.ejs')
+	res.render('projects.ejs',{
+		isAuth: req.isAuthenticated,
+	})
 })
 
 
 //createprojectpage
 server.get('/create', isAuth, (req, res) => {
-	res.render('createproject.ejs')
+	res.render('createproject.ejs',{
+		isAuth: req.isAuthenticated,
+	})
 })
 
 
 //registerpage
 server.get('/register', isNotAuth, (req, res) => {
-	res.render('registerpage.ejs');
+	res.render('registerpage.ejs',{
+		isAuth: req.isAuthenticated,
+	});
 })
 
 server.post('/register', async (req, res) => {
@@ -136,15 +155,13 @@ server.post('/register', async (req, res) => {
 
 			console.log("Erfolgreich Account angelegt");
 			console.log(userdata);
-			res.redirect('/login')
+			res.redirect('/prefrences')
 		} catch (error) {
 			console.log(error)
 			res.redirect('/register')
 		}
 	}
 })
-
-//RETURN DONE in req.flash('error_msg'. 'message') oder sowas umbenennen!
 
 
 //lookup the current user for login inside json file and give out error message if password or username is wrong
