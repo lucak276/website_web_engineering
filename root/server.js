@@ -45,7 +45,7 @@ server.get('/', (req, res) => {
 	res.render('index.ejs',);
 })
 
-//loginpage 
+//loginpage
 //isNOtAuth noch adden hier und für register
 server.get('/login', (req, res) => {
 	res.render('loginpage.ejs');
@@ -95,7 +95,7 @@ server.post('/register', async (req, res) => {
 				});
 			}
 			else {val_username = username}
-	
+
 			userdata.push({
 				firstname: firstname,
 				gender: gender,
@@ -104,7 +104,7 @@ server.post('/register', async (req, res) => {
 				password: bcryptpassword,
 				id: id,
 			})
-			
+
 			console.log("Erfolgreich Account angelegt");
 			console.log(userdata);
 			res.redirect('/login')
