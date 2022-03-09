@@ -18,6 +18,9 @@ console.log("ID Token: " + id_token);
 
 
 //change active steps
+/**
+ * test
+ */
 steps = document.querySelector('.container-steps').querySelectorAll('.btn-steps');
 console.log(steps);
 var stepsheader = document.getElementById("stepsheader");
