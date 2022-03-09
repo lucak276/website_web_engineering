@@ -6,47 +6,49 @@
     <meta name="keywords" content="Impressum">
     <title>Impressum</title>
     <link rel='stylesheet' type='text/css' href='../css/webpagestyle.css'>
-	<link rel='stylesheet' type='text/css' href='../css/webpagestyle_responsive.css'>
-	<link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel='stylesheet' type='text/css' href='../css/webpagestyle_responsive.css'>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
     <script src="https://kit.fontawesome.com/0b3a33708f.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<%- include('./header.ejs', {active: "Aboutus"}); %>
+<%- include('./header.ejs', {active: "none"}); %>
 
-<body class="padding-all">
+<div class="padding-all">
     <div class="container align-left">
         <div class="padding-bottom greenheader2">
-            <h1>Impressum</h1>
+            <h2>Impressum</h2>
         </div>
-        <h2 class="greenheader2">Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+        <h3 class="greenheader2">Angaben gem&auml;&szlig; &sect; 5 TMG</h3>
         <address class="whitetext">
             <p>Cypher Nexus<br />
             Fallenbrunnen 13<br />
             88045 Friedrichshafen</p>
         </address>
-        <h2 class="greenheader2"><strong>Vertreten durch:</strong></h2>
+        <h3 class="greenheader2"><strong>Vertreten durch:</strong></h3>
         <address class="whitetext">
             <p>Luca Kaiser<br />
             Thomas Schmitz<br />
             Tobias Welti</p>
         </address>
-        <h2 class="greenheader2">Kontakt</h2> 
+        <h3 class="greenheader2">Kontakt</h3> 
         <address class="whitetext">
             <p>Ansprechpartner: Thomas Schmitz <br/>
-                <a href="tel:+4917516874433">+4917516874433</a> <br />
-                <a href="mailto:contact.cyphernexus@gmail.com">contact.cyphernexus@gmail.com</a> </p>
+                <a class="whitetext" href="tel:+4917516874433">+4917516874433</a> <br />
+                <a class="whitetext" href="mailto:contact.cyphernexus@gmail.com">contact.cyphernexus@gmail.com</a> </p>
         </address>
-        <h2 class="greenheader2">Umsatzsteuer-ID</h2>
+        <h3 class="greenheader2">Umsatzsteuer-ID</h3>
         <address class="whitetext">
             <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz:<br />
             DE999999999</p>
         </address>
-        <h2 class="greenheader2">Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
+        <h3 class="greenheader2">Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h3>
         <address class="whitetext">
             <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
         </address>
     </div>
-</body>
+</div>
+
+<%- include('./footer.ejs'); %>
