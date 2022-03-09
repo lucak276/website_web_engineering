@@ -63,7 +63,7 @@ server.get('/preferences', isAuth, (req, res) => {
 })
 
 //aboutuspage
-server.get('aboutus', (req, res) => {
+server.get('/aboutus', (req, res) => {
 	res.render('aboutus.ejs')
 })
 
@@ -104,6 +104,7 @@ server.post('/register', async (req, res) => {
 				password: bcryptpassword,
 				id: id,
 			})
+			
 			console.log("Erfolgreich Account angelegt");
 			console.log(userdata);
 			res.redirect('/login')
