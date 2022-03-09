@@ -1,10 +1,1 @@
-[
-    {
-        "firstname": "Tobias",
-        "gender": "male",
-        "secondname": "Welti",
-        "username": "weltitob",
-        "password": "$2b$10$m2Pu2nAca.SaIAgnznqn4.qUGESczi6cE8vhKkydD/TuRw5gDc9dK",
-        "id": "1646753422191"
-        }
-]
+[{"firstname":"Tobias","gender":"male","secondname":"Welti","username":"weltitob","password":"$2b$10$m2Pu2nAca.SaIAgnznqn4.qUGESczi6cE8vhKkydD/TuRw5gDc9dK","id":"1646753422191"},{"firstname":"sdasdasda","gender":"male","secondname":"asdasdasd","username":"weltitobdsaasd","password":"$2b$10$yUwRT3sF1zrz/zzv6uIF0uYmK6/5FRImWqoOY.3TvjUvjazrv3Xxi","id":"1646813301589"}]
