@@ -72,7 +72,7 @@ server.get('/aboutus', (req, res) => {
 
 //impressum
 server.get('/impressum', (req, res) => {
-	res.render('aboutus.ejs')
+	res.render('impressum.ejs')
 })
 
 
