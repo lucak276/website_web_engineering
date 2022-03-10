@@ -358,6 +358,21 @@ button{
   opacity: 0.8;
 }
 
+.btn-red {
+  text-decoration: none;
+  padding: 6px 15px;
+  background-color: #141B29;
+  color: #fff;
+  opacity: 0.9;
+  border-radius: 20.0px;
+  background: rgba(255, 86, 102, 1);
+  color: #141B29;
+}
+
+.btn-red:hover{
+  opacity: 0.8;
+}
+
 
 /*Socialmedia ref*/
 
@@ -446,7 +461,7 @@ header{
   justify-content: space-between;
   width: 100%;
   height: auto;
-  padding: 15.0px 80.0px;
+  padding: 10.0px 60.0px;
   display: flex;
 }
 
@@ -606,6 +621,23 @@ header ul li {
     padding: 0 10% 0 10%;
   }
 
+  /* Header */
+
+  header{
+    background-color: rgba(20,27,41,1);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  
+  header .CypherNexusLogo {
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 800.0px){
@@ -635,23 +667,6 @@ header ul li {
     line-height: 1.5rem;
     font-size: 1rem;
     font-weight: 500;
-  }
-
-  /* header */
-  header{
-    background-color: rgba(20,27,41,1);
-    position: fixed;
-    top: 0;
-    z-index: 99999;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    padding: 15.0px 80.0px;
-    display: flex;
-  }
-  
-  header .CypherNexusLogo {
-    display: none;
   }
   
 }

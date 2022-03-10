@@ -18,7 +18,8 @@ const req = require('express/lib/request');
 //json file with all of our userdata used for saving our users
 //(can later be changed to MongoDB and realized with the mongoose package)
 var userdata = require('./userdata.json');
-
+const methodOverride = require('method-override');
+server.use(methodOverride('_method'));
 server.use("/css", express.static(path.join(__dirname, "css")));
 server.use("/assets", express.static(path.join(__dirname, "assets")));
 server.use("/pages", express.static(path.join(__dirname, "views")));
@@ -45,16 +46,14 @@ server.set('view-engine', 'ejs');
 //root is index.ejs
 server.get('/', (req, res) => {
 	res.render('index.ejs', {
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	});
 })
 
 //loginpage
 //isNOtAuth noch adden hier und für register
 server.get('/login', isNotAuth, (req, res) => {
-	res.render('loginpage.ejs',{
-		isAuth: req.isAuthenticated,
-	});
+	res.render('loginpage.ejs',);
 })
 
 server.post('/login', passport.authenticate('local', {
@@ -67,14 +66,14 @@ server.post('/login', passport.authenticate('local', {
 //prefrencespage
 server.get('/preferences', isAuth, (req, res) => {
 	res.render('preferences.ejs',{
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	});
 })
 
 //aboutuspage
 server.get('/aboutus', (req, res) => {
 	res.render('aboutus.ejs',{
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	})
 })
 
@@ -82,7 +81,7 @@ server.get('/aboutus', (req, res) => {
 //impressum
 server.get('/impressum', (req, res) => {
 	res.render('impressum.ejs',{
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	})
 })
 
@@ -90,7 +89,7 @@ server.get('/impressum', (req, res) => {
 //projectpage
 server.get('/projects', isAuth, (req, res) => {
 	res.render('projects.ejs',{
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	})
 })
 
@@ -98,7 +97,7 @@ server.get('/projects', isAuth, (req, res) => {
 //projectpage
 server.get('/projects', isAuth, (req, res) => {
 	res.render('projects.ejs',{
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	})
 })
 
@@ -106,7 +105,7 @@ server.get('/projects', isAuth, (req, res) => {
 //createprojectpage
 server.get('/create', isAuth, (req, res) => {
 	res.render('createproject.ejs',{
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	})
 })
 
@@ -114,7 +113,7 @@ server.get('/create', isAuth, (req, res) => {
 //registerpage
 server.get('/register', isNotAuth, (req, res) => {
 	res.render('registerpage.ejs',{
-		isAuth: req.isAuthenticated,
+		isAuth: req.isAuthenticated(),
 	});
 })
 
@@ -224,5 +223,5 @@ function isNotAuth(req, res, next) {
 //Logout
 server.delete('/logout', (req, res) => {
 	req.logOut()
-	res.redirect('/login')
+	res.redirect('/')
 })
