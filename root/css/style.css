@@ -226,6 +226,12 @@ p{
   align-content: flex-start;
 }
 
+.left-side-center{
+  text-align: left;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
 .align-left {
   display: flex;
   text-align: left;
@@ -473,6 +479,7 @@ header .CypherNexusLogo {
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
+  justify-content: center;
 }
 
 header ul li a {

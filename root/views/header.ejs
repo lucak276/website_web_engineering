@@ -1,5 +1,5 @@
 <header>
-    <ul class="left-side">
+    <ul class="left-side-center">
     <img class="image-cnlogo" src="./assets/logo.svg"></img>
     <a href='/' class='CypherNexusLogo greenheader padding-left2'>CypherNexus</a>
     </ul>
@@ -9,7 +9,10 @@
             <li><a <%if(active=="Projects"){%>class="active"<%}%> href="/projects">Projects</a></li>
             <li><a <%if(active=="Create"){%>class="active"<%}%> href="/create">Create</a></li>
             <form action="/logout?_method=DELETE" method="POST">
-            <button class="btn btn-red" type="submit">LogOut</button>
+            <button class="btn btn-red" type="submit">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>LogOut</span>
+            </button>
             </form>
         <% } else{ %>
             <li><a <%if(active=="Home"){%>class="active"<%}%> href="/">Home</a></li>

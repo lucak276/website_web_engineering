@@ -23,7 +23,7 @@ server.use(methodOverride('_method'));
 server.use("/css", express.static(path.join(__dirname, "css")));
 server.use("/assets", express.static(path.join(__dirname, "assets")));
 server.use("/pages", express.static(path.join(__dirname, "views")));
-server.use("javascript", express.static(path.join(__dirname, "js")));
+server.use("/js", express.static(path.join(__dirname, "js")));
 server.use(flash())
 server.use(session({
 	secret: process.env.SESSION_SECRET,
