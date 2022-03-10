@@ -195,7 +195,7 @@ p{
   justify-content: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /*neu geadded*/
+  align-items: center;
 }
 
 .container-login {
