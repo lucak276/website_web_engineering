@@ -264,7 +264,7 @@ p{
 /* Imagesizing */
 
 .left-side-image{
-  width: 65%;
+  width: 50%;
 }
 
 .img1Main{
@@ -524,7 +524,7 @@ header ul {
 
 header ul li {
   list-style: none;
-  margin-left: 5%;
+  margin: 3%;
   display: inline-block;
 }
 

@@ -20,7 +20,6 @@
     box-shadow: 0 10.0px 20.0px 0 rgba(0, 0, 0, 0.20);
     margin: 20px;
     width: 350px;
-    height: 100%;
   }
 
 .project_cards {
@@ -57,12 +56,12 @@
     font-weight: lighter;
     color: #5AC994;
     opacity: 0.9;
-    margin-bottom: 1%;
+    margin-bottom: 120px;
 }
 
 .project_joinnow {
     margin: 5% auto;
-    padding: 6px 10px;
+    padding: 6px 50px;
     border-radius: 100px;
     font-weight: 200;
     background-color: #5865F2;
@@ -71,6 +70,10 @@
     text-decoration: none;
     color: #ffffff;
     opacity: 0.9;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 0);
 }
 
 .nodeco {
@@ -90,6 +93,10 @@
     width: 100%;
     margin-top: 5px;
     justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, -50%);
 }
 
 .tags ul li{

@@ -62,5 +62,13 @@
     "username": "ufzdjshgfbzu",
     "password": "$2b$10$l6w8VG5g/HYDqKDFyNq8LuL8Va2ftZ6tlb3kpT9HU7j19bF6SlHC2",
     "id": "1646919079779"
+  },
+  {
+    "firstname": "abc",
+    "gender": "male",
+    "secondname": "xyz",
+    "username": "lol",
+    "password": "$2b$10$VqVkFDcLgmuPB/LC9YuNv.6bKW06Yp35XdOsWq00zdXSiWbmONCo2",
+    "id": "1646953504178"
   }
 ]

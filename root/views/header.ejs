@@ -8,12 +8,12 @@
             <li><a <%if(active=="Home"){%>class="active"<%}%> href="/">Home</a></li>
             <li><a <%if(active=="Projects"){%>class="active"<%}%> href="/projects">Projects</a></li>
             <li><a <%if(active=="Create"){%>class="active"<%}%> href="/create">Create</a></li>
-            <form action="/logout?_method=DELETE" method="POST">
+            <li><form action="/logout?_method=DELETE" method="POST">
             <button class="btn btn-red" type="submit">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span>LogOut</span>
             </button>
-            </form>
+            </form></li>
         <% } else{ %>
             <li><a <%if(active=="Home"){%>class="active"<%}%> href="/">Home</a></li>
             <li><a <%if(active=="Aboutus"){%>class="active"<%}%> href="/aboutus">Unser&nbsp;Team</a></li>
