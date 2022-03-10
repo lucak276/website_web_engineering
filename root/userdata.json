@@ -30,5 +30,21 @@
     "username": "weltitobdfsdf",
     "password": "$2b$10$85cyAdh0s9Oo4zVq0hU3G.ADARka7wg8xyz6cWSLHB5CUR4INoty6",
     "id": "1646837514599"
+  },
+  {
+    "firstname": "SaiCode",
+    "gender": "male",
+    "secondname": "Sai",
+    "username": "Code",
+    "password": "$2b$10$JkMHUUfqu8TSdOpQ7KLJqOwKs2mLx7eV3fAuFD1M3x62yPBYVdA12",
+    "id": "1646906709884"
+  },
+  {
+    "firstname": "SaiCode",
+    "gender": "male",
+    "secondname": "SaiCode",
+    "username": "SaiCode",
+    "password": "$2b$10$cEhObZ8asK/QU6kNng7rDugRZFvri9sULgpSyd2mUxeuTFpPRHCbq",
+    "id": "1646906803614"
   }
 ]
