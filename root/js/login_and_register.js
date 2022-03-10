@@ -8,7 +8,7 @@ function login() {
     let passwordfromlist = 'homogeil'
 
     console.log(username);
-    console.log(password);
+    //console.log(password); Wie Wäre es wenn wir das ned machen?
     
     if (username == userfromlist && password == passwordfromlist) {
         console.log("Erfolgreich eingeloggt");
