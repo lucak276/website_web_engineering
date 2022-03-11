@@ -289,7 +289,7 @@ p{
 }
 
 .image-cnlogo {
-  width: 6%;
+  width: 30px;
 }
 
 
@@ -492,17 +492,37 @@ header{
   backdrop-filter: blur(10.0px);
   -webkit-backdrop-filter: blur(20.0px);
   padding-left: 4%;
-  padding-right: 4%;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 99999;
   justify-content: space-between;
-  width: 100%;
-  height: auto;
+  height: 50px;
   display: flex;
+  transition: width 2s;
 }
-.link{text-decoration: none;}
+
+.static-logo{
+  text-decoration: none;
+  position: absolute;
+}
+
+.menu{
+  display:none;
+}
+
+.menu-opened{
+  position: absolute;
+  flex:auto;
+  right: 0;
+  top:50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 6px;
+  border-radius: 0px;
+}
+
 
 .CypherNexusLogo {
   opacity: 0.9;
@@ -686,24 +706,38 @@ header ul li {
   .padding-horizontal3{
     padding: 0 10% 0 10%;
   }
-
+}
   /* Header */
-
-  header{
-    justify-content: center;
-    display: flex;
-  }
-  
-  header .CypherNexusLogo {
-    display: none;
-  }
-
-  header .image-cnlogo{
+@media only screen and (max-width: 250.0px){
+  header .CypherNexusLogo{
     display: none;
   }
 
 }
 
+@media only screen and (max-width: 600.0px){
+  header{
+    display: flex;
+    padding: 10px 15px;
+  }
+  
+  header .selection{
+    display: none;
+  }
+  header .menu{
+    display: flex;
+  }
+
+  header ul li a {
+    text-decoration: none;
+    padding: 6px 100px;
+    background-color: #141B29;
+    color: #fff;
+    opacity: 0.9;
+    border-radius: 20.0px;
+  }
+
+}
 
 /* Responsive changes from 800px */
 

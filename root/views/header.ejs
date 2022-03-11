@@ -1,9 +1,10 @@
 <header>
-    <a href="/" class="link"><ul class="left-side-center">
+    <a href="/" class="static-logo"><ul class="left-side-center">
     <img class="image-cnlogo" src="./assets/logo.svg"></img>
     <div class='CypherNexusLogo greenheader padding-left2'>CypherNexus</div>
     </ul></a>
-     <ul>
+    <ul></ul>
+     <ul class="selection">
         <% if(isAuth) { %>
             <li><a <%if(active=="Home"){%>class="active"<%}%> href="/">Home</a></li>
             <li><a <%if(active=="Projects"){%>class="active"<%}%> href="/projects">Projects</a></li>
@@ -19,6 +20,35 @@
             <li><a <%if(active=="Aboutus"){%>class="active"<%}%> href="/aboutus">Unser&nbsp;Team</a></li>
             <li><a <%if(active=="Login"){%>class="active"<%}%> href="/login">Login</a></li>
         <% } %>
+     </ul>
+     <ul class="menu">
+        <script> function toggleMenu(){
+            var menu=document.getElementById("menu-opened");
+            if(menu.style.display === "none"){
+                menu.style.display = "block";
+            }else{
+                menu.style.display = "none";
+            }
+        }</script>
+        <img src="./assets/menu.svg" onclick="toggleMenu()"></img>
+        
+        <div class="menu-opened" id="menu-opened" style="display: none;">
+            <% if(isAuth) { %>
+            <li><a <%if(active=="Home"){%>class="active"<%}%> href="/">Home</a></li>
+            <li><a <%if(active=="Projects"){%>class="active"<%}%> href="/projects">Projects</a></li>
+            <li><a <%if(active=="Create"){%>class="active"<%}%> href="/create">Create</a></li>
+            <li><form action="/logout?_method=DELETE" method="POST">
+            <button class="btn btn-red" type="submit">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>LogOut</span>
+            </button>
+            </form></li>
+        <% } else{ %>
+            <li><a <%if(active=="Home"){%>class="active"<%}%> href="/">Home</a></li>
+            <li><a <%if(active=="Aboutus"){%>class="active"<%}%> href="/aboutus">Unser&nbsp;Team</a></li>
+            <li><a <%if(active=="Login"){%>class="active"<%}%> href="/login">Login</a></li>
+        <% } %></div>
+        
      </ul>
  </header>
 
