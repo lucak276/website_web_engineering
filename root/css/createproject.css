@@ -1,3 +1,7 @@
+/*
+Specific style page for createproject page
+*/
+
 .asideobj{
     display: flex;
     background-image: url(../assets/wave-haikei.svg);
@@ -10,7 +14,6 @@
     height: 100%;
   }
   
-  /* nochmal diese Container überprüfen*/
   
   .container-remembercheckbox{
     padding: 10.0px 0.0px 10.0px 90.0px;
@@ -90,7 +93,7 @@
     color: rgba(0, 0, 0, 0.75);
   }
   
-  /* Login goes wrong texts */
+  /* Login failed animation */
   
   
   #wrong-user-text{
