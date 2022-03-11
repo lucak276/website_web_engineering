@@ -1,7 +1,7 @@
-//for using environment variables
+//config for host and port. Default: http://localhost:3000
 const host = 'localhost';
 const port = 3000;
-
+//for using environment variables
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config()
 }
