@@ -17,9 +17,9 @@ console.log("ID Token: " + id_token);
 
 
 
-//change active steps
 /**
- * test
+ * change active steps function
+ * gets html elements through doc selectors and changes them accordingly
  */
 steps = document.querySelector('.container-steps').querySelectorAll('.btn-steps');
 console.log(steps);
@@ -44,6 +44,11 @@ steps.forEach(element => {
   })
 });
 
+
+/**
+ * specific html changes for each step
+ * 
+ */
 function changetexttostep1() {
   if(mycurrentstep != 1)
   {
@@ -82,7 +87,10 @@ function changetexttostep3() {
 
 
 
-//hello world change to Herzlich willkommen
+/**
+ * function to change "hello world" to "Herzlich Willkommen"
+ * by replacing each character with binary code
+ */
 var char = ['0', '1']
 var list = ['print("hello world!")'];
 var list2 = ['Herzlich Willkommen!']
