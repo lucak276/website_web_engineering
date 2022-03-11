@@ -1,7 +1,12 @@
+/*
+stylepage for projectpage
+*/
+
 *{
   text-decoration: none;
 }
 
+/**styles and aligns project container*/
 .projects {
     margin-top: 6%;
     margin-left: 10%;
@@ -11,6 +16,7 @@
     text-decoration: none;
 }
 
+/*adds glass like look to project containers*/
 .glass-projects{
     background: linear-gradient(135deg, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0));
     backdrop-filter: blur(10.0px);
@@ -22,12 +28,14 @@
     width: 350px;
   }
 
+/*flexibilty of project containers*/
 .project_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/*styles images in projects cards*/
 .project_image img{
     object-fit: cover;
     width: 100%;
@@ -35,6 +43,7 @@
     border-radius:20px;
 }
 
+/*changes text size*/
 .project_panel {
     padding: 1.6rem 1rem 1rem 1rem;
 }
@@ -59,6 +68,7 @@
     margin-bottom: 120px;
 }
 
+/*styles project join button*/
 .project_joinnow {
     margin: 5% auto;
     padding: 6px 50px;
@@ -75,17 +85,19 @@
     bottom: 0px;
     transform: translate(-50%, 0);
 }
-
+/*removes decoration in element*/
 .nodeco {
   text-decoration: none;
 }
 
+/*styles join now span*/
 .project_joinnow span{
   font-weight: bold;  
   text-decoration: none;
 
 }
 
+/*styles list of tags */
 .tags ul{
     text-decoration: none;
     list-style: none;

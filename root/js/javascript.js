@@ -16,7 +16,7 @@ console.log("ID Token: " + id_token);
 }
 
 
-//change active steps
+
 /**
  * change active steps function
  * gets html elements through doc selectors and changes them accordingly
@@ -88,7 +88,7 @@ function changetexttostep3() {
 
 
 /**
- * function to change "hello world" to "Herzlich Willkommen"
+ * functions to change "hello world" to "Herzlich Willkommen"
  * by replacing each character with binary code
  */
 var char = ['0', '1']
