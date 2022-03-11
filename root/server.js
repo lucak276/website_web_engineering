@@ -99,6 +99,11 @@ server.get('/register', isNotAuth, (req, res) => {
 	res.render('registerpage.ejs');
 })
 
+//404 page
+server.get('*',(req, res) => {
+	res.sendFile(__dirname + '/views/404_page.html');
+})
+
 server.post('/register', async (req, res) => {
 	let id = Date.now().toString();
 	let firstname = req.body.firstname;
