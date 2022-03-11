@@ -1,4 +1,7 @@
 //for using environment variables
+const host = 'localhost';
+const port = 3000;
+
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config()
 }
@@ -33,7 +36,7 @@ server.use(session({
 server.use(passport.initialize())
 server.use(passport.session())
 //Our server is listening on localhost port 3000
-server.listen(3000)
+server.listen(port)
 server.use(express.urlencoded({ extended: false }));
 console.log(`Server is running on http://${host}:${port}`);
 
