@@ -13,10 +13,12 @@ which inturn increases user friendliness adding to the look of
 }
 
 
-/* Body color */
+/* Body (Height makes header not overlapping with stuff) */
 
 body{
   background-color: rgba(20, 27, 41, 1);
+  overflow-y: scroll;
+  margin-top: 60px;
 }
 
 
@@ -60,6 +62,10 @@ p{
 
 .blackheader{
   color: rgba(0, 0, 0, 0.9);
+}
+
+.darkblueheader{
+  color: rgba(20, 27, 41, 0.9);
 }
 
 .whitetext{
@@ -205,13 +211,6 @@ p{
   align-items: center; 
 }
 
-.container-form {
-  margin: 40.0px auto; 
-  width: 500.0px;
-  height: auto;
-  text-align: center;
-}
-
 .container{
   flex-direction: column;
   justify-content: center;
@@ -272,6 +271,10 @@ p{
 
 .login-image{
   width: 55%;
+}
+
+.create-image{
+  width: 60%;
 }
 
 .img1Main{
@@ -544,8 +547,6 @@ header ul li {
 }
 
 
-
-
 /*Footer*/
 
 .waves{
@@ -593,6 +594,33 @@ header ul li {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+
+/* ANIMATIONS // fading transition_container in and out */
+
+.remove{
+  display: none;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: 1.5s;
+}
+
+
+/* shake container and glow red if password is wrong*/
+.shake-container-red{
+  animation-name: shake, glow-red;
+  animation-duration: 0.8s, 1s;
+  animation-iteration-count: 1, 1;
+}
+
+
+/* Responsive changes from 1000px */
 
 @media only screen and (max-width: 1000.0px){
 
@@ -676,6 +704,9 @@ header ul li {
 
 }
 
+
+/* Responsive changes from 800px */
+
 @media only screen and (max-width: 800.0px){
 
 
@@ -705,36 +736,13 @@ header ul li {
     font-weight: 500;
   }
 
-  .container-form{
-    width: auto;
+
+  /* Word break for text */
+
+  .break-word{
+    word-wrap: break-word;
   }
+
   
 }
-
-
-/* ANIMATIONS // fading transition_container in and out */
-
-.remove{
-  display: none;
-}
-
-.hide {
-  opacity: 0;
-}
-
-.fade-in {
-  opacity: 1;
-  transition: 1.5s;
-}
-
-
-/* shake container and glow red if password is wrong*/
-.shake-container-red{
-  animation-name: shake, glow-red;
-  animation-duration: 0.8s, 1s;
-  animation-iteration-count: 1, 1;
-}
-
-
-/*resize container for forms*/
 

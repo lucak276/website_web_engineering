@@ -114,8 +114,8 @@ function createlist(){
   for(let i = 0; i < list[0].length; i++){
     var randomNumber = Math.round(Math.random() * (char.length-1));
 
-    Helloworld = list[i].replace(list[0].charAt(i), char[randomNumber])
-    Herzlichwillkommen = list2[i].replace(list2[0].charAt(i), char[randomNumber])
+    var Helloworld = list[i].replace(list[0].charAt(i), char[randomNumber])
+    var Herzlichwillkommen = list2[i].replace(list2[0].charAt(i), char[randomNumber])
     list.push(Helloworld)
     list2.push(Herzlichwillkommen)
 }}

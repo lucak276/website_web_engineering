@@ -2,9 +2,9 @@
 Specific style page for createproject page
 */
 
-.asideobj{
+#createproject{
     display: flex;
-    background-image: url(../assets/wave-haikei.svg);
+    background-image: url('../assets/blurry-gradient.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,12 +123,8 @@ Specific style page for createproject page
     }
   }
   
-  
-  /* Register now */
-  
-  #registernow{
-    display: none;
-  }
+
+  /* Luca */
   
   .left-right-text{
     text-align: center;

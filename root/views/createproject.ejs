@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
   <title>CreateProjekt</title>
-  <link rel='stylesheet' type='text/css' href='../css/loginstyle.css'>
-  <link rel='stylesheet' type='text/css' href='../css/loginstyle_responsive.css'>
+  <link rel='stylesheet' type='text/css' href='../css/formstyle.css'>
+  <link rel='stylesheet' type='text/css' href='../css/formstyle_responsive.css'>
   <link rel='stylesheet' type='text/css' href="../css/style.css">
   <meta charset='UTF-8'>
   <meta name="description" content="Projekte, Projekte erstellen, Projekterstellungsformular">
@@ -18,16 +18,15 @@
   <link rel="icon" type="image/svg" href="../assets/logo.svg">
 </head>
 
-<%- include('./header.ejs', {active: "Aboutus"}); %>
+<%- include('./header.ejs', {active: "Create"}); %>
 
-<body>
+<body id="body2">
   <main>
     <div class='two-sides-even2'>
-      
       <div class='container-center'>
         <div class='container-form glass'>
           <form method='post' action='/login' class='container-center  signin-signup'>
-            <h2 class='padding-vertical blackheader'>Ihr neues Projekt</h2>
+            <h2 class='padding-vertical darkblueheader'>Ihr neues Projekt</h2>
             <div class='input-field'>
               <i class='fas fa-check'></i>
               <input type='text' placeholder='Projektname (max. 20 Zeichen)' maxlength='20' required/>
@@ -38,23 +37,18 @@
               <i class='fas fa-link'></i>
               <input type='text' placeholder='Link zum Discord' maxlength='20' required/>
             </div>
-
-            <div class='container-remembercheckbox'>
-              <input type='checkbox' id='remembercheckbox' class='remembercheckbox' value='remember'>
-              <label for='remembercheckbox'>Ich akzeptiere die Nutzungsbedingungen</label>
-          </div>
             <button type='submit' class='btn btn-darkblue'>Projekt erstellen</button>
           </form>
         </div>
       </div>
-      <aside class='container-center align-left'>
+      <aside class='container-center align-left' id='removeforresize'>
           <div class='paddingleft'>
-            <h1 class='padding-vertical leftsidetext greenheader'>Erweitern Ihrer Community!</h1>
-            <img src='../assets/undraw_add_post.svg' alt='' class='login-image'>
+            <h1 class='padding-vertical leftsidetext greenheader2'>Erweitern Sie Ihre Community!</h1>
+            <img src='../assets/undraw_add_post.svg' alt='' class='create-image'>
             <h3 class='padding-vertical leftsidetext whitetext'>Sie sind sich nicht sicher ob es ihr Projekt schon gibt? Schauen Sie einfach bei den bestehenden Projekten.</h3>
-            <a href ='/root/html/projects.html'><button class='btn btn-lightgreen'>Bestehende Projekte</button></a>
+            <a href ='/root/html/projects.html'><button class='btn btn-green'>zur projektseite</button></a>
           </div>
-        </aside>
+      </aside>
     </div>
   </main>
 </body>
