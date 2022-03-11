@@ -270,8 +270,8 @@ p{
 
 /* standardized imagesizing */
 
-.left-side-image{
-  width: 50%;
+.login-image{
+  width: 55%;
 }
 
 .img1Main{
@@ -362,6 +362,8 @@ button{
 }
 
 .btn-back {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
   height: 3.75rem;
   width:  3.75rem;
   color: rgba(255, 255, 255, 0.8);
