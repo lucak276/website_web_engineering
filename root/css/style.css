@@ -485,7 +485,9 @@ button{
 
 header{
   padding: 10.0px 60.0px;
-  background-color: rgba(20,27,41,1);
+  background-color: rgba(12, 16, 24, 0.9);/*rgba(20, 27, 41, 0.9);*/
+  backdrop-filter: blur(10.0px);
+  -webkit-backdrop-filter: blur(20.0px);
   padding-left: 4%;
   padding-right: 4%;
   width: 100%;
@@ -497,9 +499,9 @@ header{
   height: auto;
   display: flex;
 }
+.link{text-decoration: none;}
 
 .CypherNexusLogo {
-  background-color: #141B29;
   opacity: 0.9;
   font-size:  1.3em;
   font-weight: 700;
