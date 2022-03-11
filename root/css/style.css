@@ -232,6 +232,12 @@ p{
   align-content: flex-start;
 }
 
+.left-side-center{
+  text-align: left;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
 .align-left {
   display: flex;
   text-align: left;
@@ -264,7 +270,7 @@ p{
 /* standardized imagesizing */
 
 .left-side-image{
-  width: 65%;
+  width: 50%;
 }
 
 .img1Main{
@@ -325,6 +331,7 @@ button{
   border-radius: 20.0px;
   max-width: 100%;
   word-wrap: break-word;
+  opacity: 0.99;
 }
 
 .btn-lightgreen {
@@ -351,6 +358,19 @@ button{
   opacity: 0.8;
 }
 
+.btn-back {
+  height: 3.75rem;
+  width:  3.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(20, 27, 41, 1);
+  font-size: 17.0px;
+  border-radius: 0px 20.0px 20.0px 0px;
+}
+
+.btn-back:hover {
+  background-color: rgb(47, 57, 77);
+}
+
 .btn-green {
   height: 2.5rem;
   width: 13.75rem;
@@ -361,6 +381,21 @@ button{
 }
 
 .btn-green:hover{
+  opacity: 0.8;
+}
+
+.btn-red {
+  text-decoration: none;
+  padding: 6px 15px;
+  background-color: #141B29;
+  color: #fff;
+  opacity: 0.9;
+  border-radius: 20.0px;
+  background: rgba(255, 86, 102, 1);
+  color: #141B29;
+}
+
+.btn-red:hover{
   opacity: 0.8;
 }
 
@@ -452,7 +487,7 @@ header{
   justify-content: space-between;
   width: 100%;
   height: auto;
-  padding: 15.0px 80.0px;
+  padding: 10.0px 60.0px;
   display: flex;
 }
 
@@ -464,6 +499,7 @@ header .CypherNexusLogo {
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
+  justify-content: center;
 }
 
 header ul li a {
@@ -494,7 +530,7 @@ header ul {
 
 header ul li {
   list-style: none;
-  margin-left: 5%;
+  margin: 3%;
   display: inline-block;
 }
 
@@ -612,6 +648,23 @@ header ul li {
     padding: 0 10% 0 10%;
   }
 
+  /* Header */
+
+  header{
+    background-color: rgba(20,27,41,1);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  
+  header .CypherNexusLogo {
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 800.0px){
@@ -641,23 +694,6 @@ header ul li {
     line-height: 1.5rem;
     font-size: 1rem;
     font-weight: 500;
-  }
-
-  /* header */
-  header{
-    background-color: rgba(20,27,41,1);
-    position: fixed;
-    top: 0;
-    z-index: 99999;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    padding: 15.0px 80.0px;
-    display: flex;
-  }
-  
-  header .CypherNexusLogo {
-    display: none;
   }
   
 }

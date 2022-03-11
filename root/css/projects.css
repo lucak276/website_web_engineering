@@ -3,29 +3,29 @@
 }
 
 .projects {
-    margin-top: 4%;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
     color: #5AC994;
     background: #141B29;
     text-decoration: none;
 }
 
+.glass-projects{
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0));
+    backdrop-filter: blur(10.0px);
+    -webkit-backdrop-filter: blur(20.0px);
+    border: 1.0px solid rgba(255, 255, 255, 0.20);
+    border-radius: 20.0px;
+    box-shadow: 0 10.0px 20.0px 0 rgba(0, 0, 0, 0.20);
+    margin: 20px;
+    width: 350px;
+  }
+
 .project_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.project {
-    background-color: #124143;
-    margin: 10px;
-    width: 350px;
-    height: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: justify;
-
 }
 
 .project_image img{
@@ -49,25 +49,31 @@
 .project_text {
     padding-top: 0.1rem;
     text-align: center;
+    font-size: 0.2rem;
 }
 
 .project_text p{
     font-weight: lighter;
     color: #5AC994;
-    margin-bottom: 2%;
+    opacity: 0.9;
+    margin-bottom: 120px;
 }
 
 .project_joinnow {
-    margin: 3% auto;
-    padding: 10px 20px;
-    border-radius: 5px;
+    margin: 5% auto;
+    padding: 6px 50px;
+    border-radius: 100px;
     font-weight: 200;
-    background-color: #141B29;
+    background-color: #5865F2;
     width: fit-content;
     position: relative;
     text-decoration: none;
-    color: #5AC994;
-
+    color: #ffffff;
+    opacity: 0.9;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 0);
 }
 
 .nodeco {
@@ -85,32 +91,23 @@
     list-style: none;
     display: flex;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
     justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, -50%);
 }
 
 .tags ul li{
     margin: 1%;
-    padding: 8px 15px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
     color: black;
-    font-weight: 20px;
+    font-weight: bold;
     background-color: #5AC994;
-    letter-spacing: 1px;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
     width: fit-content;
     align-content: center;
 }
-
-
-
-/* Glass container*/
-
-.glass{
-    padding: 2.0% 0 2.0% 0;
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0));
-    backdrop-filter: blur(10.0px);
-    -webkit-backdrop-filter: blur(20.0px);
-    border: 1.0px solid rgba(255, 255, 255, 0.20);
-    border-radius: 20.0px;
-    box-shadow: 0 10.0px 20.0px 0 rgba(0, 0, 0, 0.20);
-  }

@@ -16,7 +16,7 @@ console.log("ID Token: " + id_token);
 }
 
 
-
+//change active steps
 /**
  * change active steps function
  * gets html elements through doc selectors and changes them accordingly

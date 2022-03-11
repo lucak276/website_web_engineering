@@ -3,17 +3,16 @@
 
 <head>
 	<title>CypherNexus</title>
-	<link rel='stylesheet' type='text/css' href='./css/webpagestyle.css'>
-	<link rel='stylesheet' type='text/css' href='./css/webpagestyle_responsive.css'>
-	<link rel='stylesheet' type='text/css' href='./css/style.css'>
+	<link rel='stylesheet' type='text/css' href='../css/webpagestyle.css'>
+	<link rel='stylesheet' type='text/css' href='../css/webpagestyle_responsive.css'>
+	<link rel='stylesheet' type='text/css' href='../css/style.css'>
 	<meta charset='UTF-8'>
 	<meta name="description" content="Loginform, Registerform, Registrierungsformular, Loginformular">
 	<meta name="keywords" content="Login, Register, Registrieren, Anmelden, Anmeldung">
 	<meta name='viewport' content="width=device-width, initial-scale=1.0">
-	<meta name="google-signin-scope" content="profile email">
-	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 	<meta name="author" content="Luca Kaiser, Tobias Welt, Thomas Enzo Schmitz">
 	<link rel="faBvicon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/svg" href="../assets/logo.svg">
 </head>
 
 <%- include('./header.ejs', {active: "Home"}); %>
@@ -32,7 +31,7 @@
 					Die beste Methode um Programmieren zu lernen ist durch die Arbeit an einem Projekt.
 					Wir wollen euch eine Plattform bieten um euch mit anderen Neueinsteigern zu verbinden.
 				</p>
-				<button class='btn btn-lightgreen'>Jetzt Registrieren</button>
+				<button class='btn btn-lightgreen' onclick="window.location.href = '/register';">Jetzt Registrieren</button>
 			</section>
 			<img src="./assets/undraw_outer_space_re_u9vd.svg" alt="CountingStarsSVG" class='image' id="rocket">
 		</div>
@@ -75,7 +74,7 @@
 					Und wenn es noch keines gibt, kannst du dir einfach ein eigenes erstellen und
 					dich mit anderen dafür zusammenschließen.
 				</p>
-				<button type='submit' class='btn btn-green'>Projekte finden</button>
+				<button type='submit' class='btn btn-green' onclick="window.location.href = '/projects';">Projekte finden</button>
 			</section>
 		</div>
 
@@ -91,14 +90,14 @@
 					Zusammen lernt und arbeitet es sich am besten. Jeder hat seine eigenen Stärken
 					und Schwächen, so kann man sich gegenseitig unterstützen und aneinander wachsen.
 				</p>
-				<button type='submit' class='btn btn-green'>Projekte finden</button>
+				<button type='submit' class='btn btn-green' onclick="window.location.href = '/projects';">Projekte finden</button>
 			</section>
 		</div>
 	</main>
 	<%- include('footer.ejs') %>
+	<script src="../js/javascript.js" charset="utf-8"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src='https://kit.fontawesome.com/5a49021eb8.js' crossorigin="anonymous"></script>
 </body>
-<script src="../js/javascript.js" charset="utf-8"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src='https://kit.fontawesome.com/5a49021eb8.js' crossorigin="anonymous"></script>
 </html>

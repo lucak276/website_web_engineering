@@ -15,45 +15,48 @@
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src='https://kit.fontawesome.com/5a49021eb8.js' crossorigin="anonymous"></script>
   <script src='javascript.js'></script>
+  <link rel="icon" type="image/svg" href="../assets/logo.svg">
 </head>
 
+<%- include('./header.ejs', {active: "Aboutus"}); %>
+
 <body>
-<main>
-  <div class='two-sides-even2'>
+  <main>
+    <div class='two-sides-even2'>
+      
+      <div class='container-center'>
+        <div class='container-login glass'>
+          <form method='post' action='/login' class='container-center  signin-signup'>
+            <h2 class='padding-vertical blackheader'>Ihr neues Projekt</h2>
+            <div class='input-field'>
+              <i class='fas fa-check'></i>
+              <input type='text' placeholder='Projektname (max. 20 Zeichen)' maxlength='20' required/>
+            </div>
+              <textarea class="padding-top" name="text" id="text" placeholder='Beschreibung (max. 100 Zeichen)' maxlength="500" rows="10">
+              </textarea>
+            
+            <div class='input-field'>
+              <i class='fas fa-link'></i>
+              <input type='text' placeholder='Link zum Discord' maxlength='20' required/>
+            </div>
 
-    <div class='container-center'>
-      <div class='container-login glass'>
-        <form method='post' action='/login' class='signin-signup'>
-          <h2 class='padding-vertical blackheader'>Ihr neues Projekt</h2>
-          <div class='input-field'>
-            <i class='fas fa-check'></i>
-            <input type='text' placeholder='Projektname (max. 20 Zeichen)' maxlength='20' required/>
+            <div class='container-remembercheckbox'>
+              <input type='checkbox' id='remembercheckbox' class='remembercheckbox' value='remember'>
+              <label for='remembercheckbox'>Ich akzeptiere die Nutzungsbedingungen</label>
           </div>
-            <textarea class="padding-top" name="text" id="text" placeholder='Beschreibung (max. 100 Zeichen)' maxlength="500" rows="10">
-            </textarea>
-          
-          <div class='input-field'>
-            <i class='fas fa-link'></i>
-            <input type='text' placeholder='Link zum Discord' maxlength='20' required/>
-          </div>
-
-          <div class='container-remembercheckbox'>
-            <input type='checkbox' id='remembercheckbox' class='remembercheckbox' value='remember'>
-            <label for='remembercheckbox'>Ich akzeptiere die Nutzungsbedingungen</label>
+            <button type='submit' class='btn btn-darkblue'>Projekt erstellen</button>
+          </form>
         </div>
-          <button type='submit' class='btn btn-darkblue'>Projekt erstellen</button>
-        </form>
       </div>
+      <aside class='container-center align-left'>
+          <div class='paddingleft'>
+            <h1 class='padding-vertical leftsidetext greenheader'>Erweitern Ihrer Community!</h1>
+            <img src='../assets/undraw_add_post.svg' alt='' class='left-side-image'>
+            <h3 class='padding-vertical leftsidetext whitetext'>Sie sind sich nicht sicher ob es ihr Projekt schon gibt? Schauen Sie einfach bei den bestehenden Projekten.</h3>
+            <a href ='/root/html/projects.html'><button class='btn btn-lightgreen'>Bestehende Projekte</button></a>
+          </div>
+        </aside>
     </div>
-    <aside class='container-center align-left'>
-        <div class='paddingleft'>
-          <h1 class='padding-vertical leftsidetext greenheader'>Erweitern Ihrer Community!</h1>
-          <img src='../assets/undraw_add_post.svg' alt='' class='left-side-image'>
-          <h3 class='padding-vertical leftsidetext whitetext'>Sie sind sich nicht sicher ob es ihr Projekt schon gibt? Schauen Sie einfach bei den bestehenden Projekten.</h3>
-          <a href ='/root/html/projects.html'><button class='btn btn-lightgreen'>Bestehende Projekte</button></a>
-        </div>
-      </aside>
-  </div>
-</main>
+  </main>
 </body>
 </html>
