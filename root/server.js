@@ -32,9 +32,10 @@ server.use(session({
 }))
 server.use(passport.initialize())
 server.use(passport.session())
-//Our server is listening on localhost port 3000 (Nginx Server on Port 81)
+//Our server is listening on localhost port 3000
 server.listen(3000)
 server.use(express.urlencoded({ extended: false }));
+console.log(`Server is running on http://${host}:${port}`);
 
 //call for initializing user
 initialize();
