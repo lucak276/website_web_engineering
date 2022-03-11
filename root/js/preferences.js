@@ -1,5 +1,7 @@
 
-// preference buttons on click event to mark them as checked
+/** 
+ * gets buttons by class query selector from html
+ * */ 
 buttons = document.querySelectorAll('.btn-pref');
 
 buttons.forEach(element => {
