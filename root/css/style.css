@@ -264,7 +264,7 @@ p{
 /* Imagesizing */
 
 .left-side-image{
-  width: 65%;
+  width: 50%;
 }
 
 .img1Main{
@@ -325,6 +325,7 @@ button{
   border-radius: 20.0px;
   max-width: 100%;
   word-wrap: break-word;
+  opacity: 0.99;
 }
 
 .btn-lightgreen {
@@ -349,6 +350,19 @@ button{
 
 .btn-darkblue:hover {
   opacity: 0.8;
+}
+
+.btn-back {
+  height: 3.75rem;
+  width:  3.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(20, 27, 41, 1);
+  font-size: 17.0px;
+  border-radius: 0px 20.0px 20.0px 0px;
+}
+
+.btn-back:hover {
+  background-color: rgb(47, 57, 77);
 }
 
 .btn-green {
@@ -510,7 +524,7 @@ header ul {
 
 header ul li {
   list-style: none;
-  margin-left: 5%;
+  margin: 3%;
   display: inline-block;
 }
 
