@@ -205,7 +205,7 @@ p{
   align-items: center; 
 }
 
-.container-login {
+.container-form {
   margin: 40.0px auto; 
   width: 500.0px;
   height: auto;
@@ -702,6 +702,10 @@ header ul li {
     font-size: 1rem;
     font-weight: 500;
   }
+
+  .container-form{
+    width: auto;
+  }
   
 }
 
@@ -732,6 +736,3 @@ header ul li {
 
 /*resize container for forms*/
 
-.container-login{
-  width: auto;
-}
