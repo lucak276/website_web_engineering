@@ -47,7 +47,7 @@ stylepage for projectpage
 .project_panel {
     padding: 1.6rem 1rem 1rem 1rem;
 }
-
+/*header and text styling*/
 .project_title h2{
     font-size: 1.4rem;
     color: #5AC994;

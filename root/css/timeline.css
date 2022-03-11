@@ -8,6 +8,8 @@ style page for timeline steps on index html
   box-sizing: border-box;
 }
 
+/*text and header styling*/
+
 p{
   line-height: 35.0px;
   font-size: 20.0px;
@@ -30,6 +32,7 @@ p{
   left: 60.0px;
 }
 
+/*styles containers*/
 .container-steps{
   background-color: rgb(119, 139, 139);
   padding: 5.0px 120.0px 5.0px 5.0px;
@@ -46,6 +49,7 @@ p{
   background-color: rgba(90, 201, 148, 1);;
   }
 
+/*styles and aligns for buttons*/
 .btn-steps{
   z-index: 1;
   height: 40.0px;
@@ -56,7 +60,7 @@ p{
   align-items: center;
   text-align: center;
 }
-
+/* defines hover event for steps*/
 .btn-steps:hover{
   transform: scale(120%);
   transition: all 0.25s;

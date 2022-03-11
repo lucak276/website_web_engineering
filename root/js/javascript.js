@@ -1,21 +1,24 @@
-//IMPORTANT NOTE https://developers.google.com/identity/sign-in/web
+/**
+ * function to get googleUser data
+ * @param {*} googleUser 
+ * not yet implemented
+ */
 
 function onSignIn(googleUser) {
-// Useful data for your client-side scripts:
 var profile = googleUser.getBasicProfile();
-console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+console.log("ID: " + profile.getId()); 
 console.log('Full Name: ' + profile.getName());
 console.log('Given Name: ' + profile.getGivenName());
 console.log('Family Name: ' + profile.getFamilyName());
 console.log("Image URL: " + profile.getImageUrl());
 console.log("Email: " + profile.getEmail());
 
-// The ID token you need to pass to your backend:
+/**
+ * id which gets passed to backend
+ */
 var id_token = googleUser.getAuthResponse().id_token;
 console.log("ID Token: " + id_token);
 }
-
-
 
 /**
  * change active steps function
@@ -23,13 +26,19 @@ console.log("ID Token: " + id_token);
  */
 steps = document.querySelector('.container-steps').querySelectorAll('.btn-steps');
 console.log(steps);
+
 var stepsheader = document.getElementById("stepsheader");
 var stepstext = document.getElementById("stepsbodytext");
 var button = document.getElementById("stepsbutton");
 var transition_container = document.getElementById("transition_container");
 var mycurrentstep = 1;
-
+/**
+ * 
+ */
 steps.forEach(element => {
+  /**
+   *
+   */
   element.addEventListener('click', function(){
     steps.forEach(step=>step.classList.remove('active'))
     this.classList.add('active');
@@ -46,7 +55,8 @@ steps.forEach(element => {
 
 
 /**
- * specific html changes for each step
+ * function which defines
+ * specific html content changes for each step
  * 
  */
 function changetexttostep1() {
