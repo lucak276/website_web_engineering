@@ -76,8 +76,8 @@ function changetexttostep2() {
   if(mycurrentstep != 2)
   {
     mycurrentstep = 2
-    stepsheader.innerHTML = "Schritt 2: Choose your preferences";
-    stepstext.innerHTML = "Wähle deine Lieblingsthemen aus.\
+    stepsheader.innerHTML = "Schritt 2: Wähle deine Präferenzen";
+    stepstext.innerHTML = "Wähle deine Lieblingsthemen und Interessen aus.\
                            Von Alltagsanwendungen bis hinzu \
                            futuristischen Themen wie AI oder Quantum Computing findest du hier alles."
     button.innerHTML = 'Registrieren'
@@ -88,7 +88,7 @@ function changetexttostep3() {
   if(mycurrentstep != 3)
   {
     mycurrentstep = 3
-    stepsheader.innerHTML = "Schritt 3: Join a project";
+    stepsheader.innerHTML = "Schritt 3: Trete einem Projekt bei";
     stepstext.innerHTML = "Nach dem du deine Lieblingsthemen ausgesucht hast \
         kannst du dir nun ein Projekt deiner Wahl aussuchen oder dein eigenes erstellen."
     button.innerHTML = 'Registrieren'

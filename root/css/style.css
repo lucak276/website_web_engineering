@@ -721,9 +721,17 @@ header ul li {
   transition: 1.5s;
 }
 
+
 /* shake container and glow red if password is wrong*/
 .shake-container-red{
   animation-name: shake, glow-red;
   animation-duration: 0.8s, 1s;
   animation-iteration-count: 1, 1;
+}
+
+
+/*resize container for forms*/
+
+.container-login{
+  width: auto;
 }

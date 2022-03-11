@@ -1,8 +1,6 @@
-
-
 @media only screen and (max-width: 1000.0px){
 
-  /* Specific */
+/* Specific */
 
 #registernow{
   display: block;
@@ -11,6 +9,9 @@
 #login_leftsidetext{
   display: none;
 }
+
+
+/* make entire screen resizeable*/
 
 body{
   display: flex;
@@ -45,6 +46,13 @@ body{
 
 .register-text a:hover{
   opacity: 0.8;
+}
+
+
+/* remove back button for smaller screen */
+
+.btn-back {
+  display: none;
 }
 
 }
