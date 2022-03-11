@@ -1,3 +1,13 @@
+
+@media only screen and (max-width: 800.0px){
+  /* Container for forms */
+
+  .container-form{
+    width: auto;
+  }
+}
+
+
 @media only screen and (max-width: 1000.0px){
 
 /* Specific */
@@ -6,7 +16,7 @@
   display: block;
 }
 
-#login_leftsidetext{
+#removeforresize{
   display: none;
 }
 
