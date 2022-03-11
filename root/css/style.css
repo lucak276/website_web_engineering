@@ -322,8 +322,6 @@ button{
 }
 
 .btn {
-  margin-top: 0.625rem;
-  margin-bottom: 0.625rem;
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -336,6 +334,8 @@ button{
 }
 
 .btn-lightgreen {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
   height: 3.75rem;
   width: 21.25rem;
   background-color: rgba(192, 247, 183, 1);
@@ -348,6 +348,8 @@ button{
 }
 
 .btn-darkblue {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
   height: 3.75rem;
   width: 21.25rem;
   color: rgba(255, 255, 255, 0.8);
@@ -373,6 +375,8 @@ button{
 }
 
 .btn-green {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
   height: 2.5rem;
   width: 13.75rem;
   background-color: rgba(90, 201, 148, 1);
@@ -478,6 +482,7 @@ button{
 /* Header styling  */
 
 header{
+  padding: 10.0px 60.0px;
   background-color: rgba(20,27,41,1);
   padding-left: 4%;
   padding-right: 4%;
@@ -488,11 +493,10 @@ header{
   justify-content: space-between;
   width: 100%;
   height: auto;
-  padding: 10.0px 60.0px;
   display: flex;
 }
 
-header .CypherNexusLogo {
+.CypherNexusLogo {
   background-color: #141B29;
   opacity: 0.9;
   font-size:  1.3em;
@@ -654,17 +658,15 @@ header ul li {
   /* Header */
 
   header{
-    background-color: rgba(20,27,41,1);
-    position: fixed;
-    top: 0;
-    z-index: 99999;
     justify-content: center;
-    width: 100%;
-    height: auto;
     display: flex;
   }
   
   header .CypherNexusLogo {
+    display: none;
+  }
+
+  header .image-cnlogo{
     display: none;
   }
 
