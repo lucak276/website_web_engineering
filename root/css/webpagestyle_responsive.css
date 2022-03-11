@@ -1,9 +1,4 @@
-/*
-Style sheet make webpages of index, impressum and 
-about us responsive to different devices
-*/
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
     .teams{
       max-width: 100%;
     }

@@ -577,7 +577,9 @@ header ul li {
 }
 
 .sub-aboutus{
-    max-width: 1200px;
+    /*max-width: 90%;*/
+    padding-left: 10px;
+    padding-right: 10px;
     margin: auto;
     display: flex;
     justify-content: center;
