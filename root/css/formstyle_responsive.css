@@ -35,6 +35,14 @@ body{
   width: auto;
 }
 
+.container-remembercheckbox{
+  padding: 10.0px 0.0px 10.0px 30.0px;
+}
+
+.container-rememberradiobox{
+  padding: 10.0px 0.0px 10.0px 30.0px;
+}
+
 .left-side{
   display: none;
 }
