@@ -32,6 +32,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
+      cache-dependency-path: ./root/package-lock.json
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install npm
