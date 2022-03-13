@@ -27,11 +27,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: cd /home/runner/work/website_web_engineering/website_web_engineering/root
     #- name: Use Node.js ${{ matrix.node-version }}
     #  uses: actions/setup-node@v2
     #  with:
     #    node-version: ${{ matrix.node-version }}
     #    cache: 'npm'
-    - run: npm install
-    - run: node server.js
+    - name: Install npm
+      working-directory: ./root
+      run: npm install
+    - name: Run server.js
+      working-directory: ./root
+      run: node server.js
