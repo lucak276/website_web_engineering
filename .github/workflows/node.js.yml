@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: cd root
+    - run: cd /home/runner/work/website_web_engineering/website_web_engineering/root
     #- name: Use Node.js ${{ matrix.node-version }}
     #  uses: actions/setup-node@v2
     #  with:
