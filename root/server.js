@@ -159,7 +159,7 @@ server.post('/register', async (req, res) => {
 
 			console.log("Erfolgreich Account angelegt");
 			console.log(userdata);
-			//res.redirect('/preferences')
+			res.redirect('/preferences')
 		} catch (error) {
 			console.log(error)
 			res.redirect('/register')

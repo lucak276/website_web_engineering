@@ -70,5 +70,45 @@
     "username": "lol",
     "password": "$2b$10$VqVkFDcLgmuPB/LC9YuNv.6bKW06Yp35XdOsWq00zdXSiWbmONCo2",
     "id": "1646953504178"
+  },
+  {
+    "firstname": "Tobias",
+    "gender": "male",
+    "secondname": "Welti",
+    "username": "tobiaswelti",
+    "password": "$2b$10$g3Q65zARZ2bjkJX4ODs/p.bEVBVAE9NGtIEe78/oxZg6Cu.F3uP3a",
+    "id": "1647173065749"
+  },
+  {
+    "firstname": "Test",
+    "gender": "male",
+    "secondname": "fdjfjlsd",
+    "username": "dfsfdsfssfd",
+    "password": "$2b$10$0PrgQZZ.4XcRabjCOBvjCe.pzP7TN7OWOSy33SPYCWHF5iIlphOQm",
+    "id": "1647184709983"
+  },
+  {
+    "firstname": "eijsaejqwie",
+    "gender": "male",
+    "secondname": "qwewqeqwe",
+    "username": "eqwqweqwe",
+    "password": "$2b$10$1V1C6h0fKj2nTcQXrjGAjuIHsWrrUIh9aexrHJSnzzdHHc733Vgfy",
+    "id": "1647185639517"
+  },
+  {
+    "firstname": "dwhljlsdjlf",
+    "gender": "male",
+    "secondname": "safasfasfasas",
+    "username": "fasfasfasfasfa",
+    "password": "$2b$10$.nLN26tNc8boa5RcQV2dVuaF1zk0ivIEa4PR9x6KrGzdUhOw6lshu",
+    "id": "1647185799288"
+  },
+  {
+    "firstname": "dsaasdasdsa",
+    "gender": "male",
+    "secondname": "dasdasdasdsa",
+    "username": "dasdasdasdasdsa",
+    "password": "$2b$10$3bp1jyKMPOkqmsoLbrI/ROUk4/HWb2xsWGUKrOFwsjxrQWgDr1zAq",
+    "id": "1647185913788"
   }
 ]
