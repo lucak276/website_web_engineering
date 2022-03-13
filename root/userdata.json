@@ -110,5 +110,13 @@
     "username": "dasdasdasdasdsa",
     "password": "$2b$10$3bp1jyKMPOkqmsoLbrI/ROUk4/HWb2xsWGUKrOFwsjxrQWgDr1zAq",
     "id": "1647185913788"
+  },
+  {
+    "firstname": "Thomas",
+    "gender": "male",
+    "secondname": "Schmitz",
+    "username": "Chewbacha",
+    "password": "$2b$10$2dNWlL74ReSMP8HOibrIA.A/cz19ftlNeBJB5zC0BDhH55LE8hG3q",
+    "id": "1647188644764"
   }
 ]
