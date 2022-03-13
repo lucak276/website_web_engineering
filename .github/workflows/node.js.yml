@@ -28,7 +28,6 @@ jobs:
       run:
         working-directory: root
     steps:
-    - run: npm install bcrypt
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
@@ -36,6 +35,7 @@ jobs:
         cache-dependency-path: ./root/package-lock.json
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm install bcrypt
     - name: Install npm
       run: npm install
     - name: Run server.js
