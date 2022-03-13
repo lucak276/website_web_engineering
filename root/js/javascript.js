@@ -1,5 +1,5 @@
 /**
- * change active steps function
+ * change active step on button press
  * gets html elements through doc selectors and changes them accordingly
  */
 steps = document.querySelector('.container-steps').querySelectorAll('.btn-steps');
@@ -35,8 +35,8 @@ steps.forEach(element => {
 /**
  * function which defines
  * specific html content changes for each step
- * @member{stepsheader} accesses html content through DOM and changes it
- * @member{mycurrentstep} changes current step to step 1
+ * @member {stepsheader} accesses html content through DOM and changes it
+ * @member {mycurrentstep} changes current step to step 1
  *
  */
 function changetexttostep1() {
@@ -86,10 +86,11 @@ function changetexttostep3() {
 
 /**
  * functions to change "hello world" to "Herzlich Willkommen"
- * by replacing each character with binary code
- * @member{char}
- * @member {list} text- print ("hello world!")
- * @member{list2} text - "Herzlich Willkommen!"
+ * by replacing each character with random binary code
+ * replayces character by character the text and pushes each updated word into 2 diffent lists
+ * @member {char}
+ * @member {list} text- list for the rotation from print("helloworld") to only zeros and ones.
+ * @member {list2} text - list for the rotation from "Herzlich Willkommen!" to only zeros and ones.
  * @member {changenum2} holds 21 as value
  * @member {changenum} holds 0 as value
  */
@@ -112,7 +113,7 @@ function createlist(){
     list2.push(Herzlichwillkommen)
 }}
 /**
- * sets Timeout of "Herzlich Willkommen"- change function
+ * sets timeout of "Herzlich Willkommen" rotation and then starts it in the interval 50
  * @type {number}
  */
 setTimeout(function () {
@@ -121,7 +122,7 @@ setTimeout(function () {
 }, 1000);
 
 /**
- * change Heading to 0 1 and ones
+ * change heading to zeros and ones from appended list
  *  @member {changenum}
  *  @member {changenum2}
  */
