@@ -30,6 +30,7 @@ server.use("/pages", express.static(path.join(__dirname, "views")));
 server.use("/js", express.static(path.join(__dirname, "js")));
 server.use(flash())
 server.use(session({
+
 	secret: process.env.SESSION_SECRET,
 	resave: false,
 	saveUninitialized: false,
@@ -49,6 +50,7 @@ server.set('view-engine', 'ejs');
 
 
 //root is index.ejs
+
 server.get('/', (req, res) => {
 	res.render('index.ejs', {
 		isAuth: req.isAuthenticated(),
@@ -74,11 +76,14 @@ server.get('/preferences', isAuth, (req, res) => {
 		isAuth: req.isAuthenticated(),
 	});
 })
-
+/**
+ *
+ * @param req
+ * @param res
+ */
 //aboutuspage
 server.get('/aboutus', (req, res) => {
-	res.render('aboutus.ejs',{
-		isAuth: req.isAuthenticated(),
+	res.render('aboutus.ejs',{isAuth: req.isAuthenticated(),
 	})
 })
 
