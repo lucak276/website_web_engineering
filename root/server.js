@@ -281,10 +281,19 @@ server.delete('/logout', (req, res) => {
 	res.redirect('/')
 })
 
-
 /**
  * 404 page redirect
  */
 server.get('*', (req, res) => {
 	res.sendFile(__dirname + '/views/404_page.html');
 })
+
+
+var args = process.argv.slice(2);
+if(args.length>0){
+	console.log(args);
+	if(args[0]==="test"){
+	console.log("Test done, Exiting..");
+	process.exit(0);
+	}
+}
