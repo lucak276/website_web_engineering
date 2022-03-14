@@ -39,7 +39,7 @@ jobs:
       env:
         FILE_NAME: "root/.env"
         FILE_DATA: "SESSION_SECRET=test"
-    - run: npm install bcrypt
+    #- run: npm install bcrypt
     - name: Install npm
       run: npm install
     - name: Run server.js
