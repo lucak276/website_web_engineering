@@ -235,3 +235,12 @@ server.delete('/logout', (req, res) => {
 	req.logOut()
 	res.redirect('/')
 })
+
+var args = process.argv.slice(2);
+if(args.length>0){
+	console.log(args);
+	if(args[0]==="test"){
+	console.log("Test done, Exiting..");
+	process.exit(0);
+	}
+}
