@@ -35,6 +35,10 @@ jobs:
         cache-dependency-path: ./root/package-lock.json
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - uses: "finnp/create-file-action@master"
+      env:
+        FILE_NAME: ".env"
+        FILE_DATA: "SESSION_SECRET=test"
     - run: npm install bcrypt
     - name: Install npm
       run: npm install
