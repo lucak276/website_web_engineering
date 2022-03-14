@@ -48,7 +48,6 @@ function changetexttostep1() {
                            Erstelle dir deinen individuellen Benutzernamen und ein sicheres Passwort,\
                            noch ein paar Angaben zu dir und los gehts!\
                            "
-    button.innerHTML = 'Registieren'
   }
 }
 
@@ -64,7 +63,6 @@ function changetexttostep2() {
     stepstext.innerHTML = "Wähle deine Lieblingsthemen und Interessen aus.\
                            Von Alltagsanwendungen bis hinzu \
                            futuristischen Themen wie AI oder Quantum Computing findest du hier alles."
-    button.innerHTML = 'Registrieren'
   }
 }
 /**
@@ -78,7 +76,6 @@ function changetexttostep3() {
     stepsheader.innerHTML = "Schritt 3: Trete einem Projekt bei";
     stepstext.innerHTML = "Nach dem du deine Lieblingsthemen ausgesucht hast \
         kannst du dir nun ein Projekt deiner Wahl aussuchen oder dein eigenes erstellen."
-    button.innerHTML = 'Registrieren'
   }
 }
 

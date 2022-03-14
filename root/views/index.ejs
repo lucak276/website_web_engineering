@@ -58,7 +58,11 @@
 					Erstelle dir deinen individuellen Benutzernamen und ein sicheres Passwort,
 					noch ein paar Angaben zu dir und los gehts!
 				</p>
-				<button id="stepsbutton" type='submit' class='btn btn-green'>Registieren</button>
+				<% if(isAuth) { %>
+					<a href="/create"><button id="stepsbutton" type='submit' class='btn btn-green'>Create Projekt</button></a>
+				<% } else{ %>
+					<a href="/register"><button id="stepsbutton" type='submit' class='btn btn-green'>Registieren</button></a>
+				<% } %>
 			</section>
 		</div>
 
