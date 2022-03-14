@@ -78,16 +78,28 @@ server.get('/', (req, res) => {
 	});
 })
 
-
+/**
+ * handles redirect to login (only accessable if user isn't autheitcated)
+ */
 server.get('/login', isNotAuth, (req, res) => {
 	res.render('loginpage.ejs',);
 })
 
+/**
+ * handles login with passport
+ */
 server.post('/login', passport.authenticate('local', {
 	successRedirect: '/projects',
 	failureRedirect: '/login',
 	failureFlash: true
 }))
+
+/**
+ * 404 page redirect
+ */
+server.get('*',(req, res) => {
+    res.sendFile(__dirname + '/views/404_page.html');
+})
 
 
 /**
