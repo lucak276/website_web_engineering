@@ -1,1 +1,3 @@
 # CypherNexus Websiteproject
+
+Viel Spaß!
