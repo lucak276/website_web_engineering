@@ -39,4 +39,4 @@ jobs:
     - name: Install npm
       run: npm install
     - name: Run server.js
-      run: node server.js
+      run: node server.js test
