@@ -48,11 +48,11 @@
 						<h2 class='padding-vertical2 whiteheader'>Login</h2>
 						<div class='input-field'>
 							<i class='fas fa-user'></i>
-							<input id='usernameinput' pattern="^[a-zA-Z0-9]+$" name='username' type='username' placeholder='Username' />
+							<input id='usernameinput' pattern="^[a-zA-Z0-9]+$" name='username' type='username' autocomplete="username" placeholder='Username' />
 						</div>
 						<div class='input-field'>
 							<i class='fas fa-lock'></i>
-							<input id='passwordinput' name='password' type='password' placeholder='Password'
+							<input id='passwordinput' name='password' type='password' autocomplete="current-password" placeholder='Password'
 								minlength='8' required />
 						</div>
 						<% if(typeof messages.error !== "undefined") { %>

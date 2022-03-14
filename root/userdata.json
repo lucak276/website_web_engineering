@@ -118,5 +118,24 @@
     "username": "Chewbacha",
     "password": "$2b$10$2dNWlL74ReSMP8HOibrIA.A/cz19ftlNeBJB5zC0BDhH55LE8hG3q",
     "id": "1647188644764"
+  },
+  {
+    "gender": "male",
+    "username": "weltitob22",
+    "password": "$2b$10$SuPpwuguYOrKtyo.WGM.LOBop5ltxt0gcYZ7cxW6jLJIzQjGsZKq6",
+    "id": "1647292457367"
+  },
+  {
+    "gender": "male",
+    "username": "weltitob123",
+    "password": "$2b$10$v5PxHo7ILEd2jO0ZUpLdAO8jON5Pr.9TTiq6k9Ugj4HfyRI9PR4su",
+    "id": "1647292505677"
+  },
+  {
+    "email": "talentix.loopingflieger@gmail.com",
+    "gender": "male",
+    "username": "Baguette",
+    "password": "$2b$10$aYe1vnDtTUTUI7suvLYhDeLaxFWyDgNZ4hfL5DJMKTkw4Xp1NF2Eq",
+    "id": "1647295545011"
   }
 ]

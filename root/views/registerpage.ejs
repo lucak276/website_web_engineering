@@ -46,19 +46,19 @@
           <h2 class='padding-vertical whiteheader'>Registrieren</h2>
           <div class='input-field'>
             <i class='fas fa-user'></i>
-            <input id="register_firstname" pattern="^[a-zA-ZäÄöÖüÜ0-9]+$" name="firstname" type='text' placeholder='Vorname (max. 20 Zeichen)' maxlength='20' required/>
+            <input id="register_username" pattern="^[a-zA-ZäÄöÖüÜ0-9]+$" name="username" autocomplete="username" type='text' placeholder='Username (max. 20 Zeichen)' maxlength='20' required/>
           </div>
           <div class='input-field'>
             <i class='fas fa-user'></i>
-            <input id="register_secondname" pattern="^[a-zA-ZäÄöÖüÜ0-9]+$" name="secondname" type='text' placeholder='Nachname (max. 20 Zeichen)' maxlength='20' required/>
+            <input id="register_email"  name="email" autocomplete="email" type='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder='Gebe deine Email Adresse ein' required/>
           </div>
           <div class='input-field'>
             <i class='fas fa-user'></i>
-            <input id="register_username" pattern="^[a-zA-Z0-9]+$" name="username" type='text' placeholder='Username (max. 20 Zeichen)' maxlength='20' required/>
+            <input id="register_password" name="password" type='password' autocomplete="new-password" placeholder='Passwort (8-20 Zeichen) ' minlength='8' maxlength="100" required/>
           </div>
           <div class='input-field'>
             <i class='fas fa-lock'></i>
-            <input id="register_password" name="password" type='password' placeholder='Passwort (8-20 Zeichen) ' minlength='8' maxlength="100" required/>
+            <input id="register_password_confirm" name="password2" type='password' autocomplete="new-password" placeholder='Passwort (8-20 Zeichen) ' minlength='8' maxlength="100" required/>
           </div>
           <div class='container-rememberradiobox'>
             <input type='radio' class='remembercheckbox' id='man_checkbox' name='rememberradiobox', value="male" checked>

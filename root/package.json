@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "generate-docs":"jsdoc -c config.json"
+    "generate-docs": "jsdoc -c config.json"
   },
   "keywords": [],
   "author": "",

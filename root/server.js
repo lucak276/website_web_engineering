@@ -23,6 +23,8 @@ const flash = require('express-flash')
 const session = require('express-session');
 const LocalStrategy = require('passport-local').Strategy
 const fs = require('fs')
+let assert = require('assert');
+let pythonBridge = require('python-bridge');
 /**
  * used as a encryption tool for passwords
  */
@@ -32,6 +34,7 @@ const req = require('express/lib/request');
 //(can later be changed to MongoDB and realized with the mongoose package)
 var userdata = require('./userdata.json');
 const methodOverride = require('method-override');
+let python = pythonBridge();
 server.use(methodOverride('_method'));
 server.use("/css", express.static(path.join(__dirname, "css")));
 server.use("/assets", express.static(path.join(__dirname, "assets")));
@@ -39,7 +42,6 @@ server.use("/pages", express.static(path.join(__dirname, "views")));
 server.use("/js", express.static(path.join(__dirname, "js")));
 server.use(flash())
 server.use(session({
-
 	secret: process.env.SESSION_SECRET,
 	resave: false,
 	saveUninitialized: false,
@@ -165,51 +167,58 @@ server.get('/register', isNotAuth, (req, res) => {
  * => redirects to pages after login or passes error messages
  * @async
  * @param id
- * @param name
+ * @param email
  * @param username
  *
  */
 server.post('/register', async (req, res) => {
 	let id = Date.now().toString();
-	let firstname = req.body.firstname;
-	let secondname = req.body.secondname;
 	let username = req.body.username;
-	const bcryptpassword = await bcrypt.hash(req.body.password, 10);
+	let email = req.body.email;
+	const bcryptpassword = await bcrypt.hash(req.body.password,10);
 	let gender = req.body.rememberradiobox;
 	let termsofservice = req.body.termsofservice;
 	const user = userdata.find(user => user.username === username);
 
+	
 	if (!termsofservice) {
 		return res.render("registerpage.ejs", {
 			errorMessage: 'Sie müssen die Nutzungsbedingungen akzeptieren'
 		});
 	}
 	else {
-		try {
-			if (user != null) {
-				return res.render("registerpage.ejs", {
-					errorMessage: 'Ein Nutzer mit diesem Usernamen existiert bereits'
-				});
+		if(req.body.password === req.body.password2){
+			try {
+				if (user != null) {
+					return res.render("registerpage.ejs", {
+						errorMessage: 'Ein Nutzer mit diesem Usernamen existiert bereits'
+					});
+				}
+				else {
+					val_username = username
+				}
+				userdata.push({
+					email: email,
+					gender: gender,
+					username: val_username,
+					password: bcryptpassword,
+					id: id,
+				})
+	
+				fs.writeFileSync('./userdata.json', JSON.stringify(userdata, null, 2));
+	
+				console.log("Erfolgreich Account angelegt");
+				console.log(userdata);
+				res.redirect('/login')
+			} catch (error) {
+				console.log(error)
+				res.redirect('/register')
 			}
-			else { val_username = username }
-
-			userdata.push({
-				firstname: firstname,
-				gender: gender,
-				secondname: secondname,
-				username: val_username,
-				password: bcryptpassword,
-				id: id,
-			})
-
-			fs.writeFileSync('./userdata.json', JSON.stringify(userdata, null, 2));
-
-			console.log("Erfolgreich Account angelegt");
-			console.log(userdata);
-			res.redirect('/login')
-		} catch (error) {
-			console.log(error)
-			res.redirect('/register')
+		}
+		else{
+			return res.render("registerpage.ejs", {
+				errorMessage: 'Bitte achte darauf, dass deine Passwörter dieselben sind'
+			});
 		}
 	}
 })
@@ -284,9 +293,10 @@ server.delete('/logout', (req, res) => {
 /**
  * 404 page redirect
  */
-server.get('*', (req, res) => {
+ server.get('*', (req, res) => {
 	res.sendFile(__dirname + '/views/404_page.html');
 })
+
 
 
 var args = process.argv.slice(2);
