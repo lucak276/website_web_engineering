@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "generate-docs":"jsdoc -c config.json"
+    "generate-docs": "jsdoc -c config.json"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "express-session": "^1.17.2",
     "jsdoc": "^3.6.10",
     "method-override": "^3.0.0",
+    "mongodb": "^4.4.1",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
     "python-bridge": "^1.1.0",

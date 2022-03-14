@@ -19,6 +19,16 @@ const fs = require('fs')
 //used as a encryption tool for passwords
 const bcrypt = require('bcrypt');
 const req = require('express/lib/request');
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://website:fRunERTmAqkQCltO@cyphernexus.egpp2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
 //json file with all of our userdata used for saving our users
 //(can later be changed to MongoDB and realized with the mongoose package)
 var userdata = require('./userdata.json');
@@ -35,6 +45,7 @@ server.use(session({
 	resave: false,
 	saveUninitialized: false,
 }))
+
 server.use(passport.initialize())
 server.use(passport.session())
 //Our server is listening on the supplied host and port
@@ -115,6 +126,12 @@ server.get('/projects', isAuth, (req, res) => {
 //createprojectpage
 server.get('/create', isAuth, (req, res) => {
 	res.render('createproject.ejs',{
+		isAuth: req.isAuthenticated(),
+	})
+})
+// A backend for the User
+server.get('/posts', isAuth, (req, res) => {
+	res.send("I am a Happy API",{
 		isAuth: req.isAuthenticated(),
 	})
 })
