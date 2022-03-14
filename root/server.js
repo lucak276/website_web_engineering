@@ -297,7 +297,12 @@ server.delete('/logout', (req, res) => {
 	res.sendFile(__dirname + '/views/404_page.html');
 })
 
+process.on('SIGINT', function() {
+    console.log("Caught interrupt signal");
 
+    if (i_should_exit)
+        process.exit();
+});
 
 var args = process.argv.slice(2);
 if(args.length>0){
