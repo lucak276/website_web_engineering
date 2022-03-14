@@ -1,13 +1,22 @@
-//config for host and port. Default: http://localhost:3000
+/**
+ * config for host and port. Default: http://localhost:3000
+ */
+
 const host = 'localhost';
 const port = 3000;
 
-//for using environment variables
+/**
+ * for using environment variables
+ */
+
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config()
 }
 
-//requirements
+/**
+ * requirements
+ */
+
 const express = require('express');
 const server = express();
 const path = require('path');
@@ -16,7 +25,9 @@ const flash = require('express-flash')
 const session = require('express-session');
 const LocalStrategy = require('passport-local').Strategy
 const fs = require('fs')
-//used as a encryption tool for passwords
+/**
+ * used as a encryption tool for passwords
+ */
 const bcrypt = require('bcrypt');
 const req = require('express/lib/request');
 //json file with all of our userdata used for saving our users
@@ -42,23 +53,32 @@ server.listen(port)
 server.use(express.urlencoded({ extended: false }));
 console.log(`Server is running on http://${host}:${port}`);
 
-//call for initializing user
+/**
+ *call for initializing user
+ *
+ *  */
+
 initialize();
 
-//defining view engine for website
+/**
+ * defines view engine as ejs
+ */
 server.set('view-engine', 'ejs');
 
 
-//root is index.ejs
 
+/**
+ * defines root as index.ejs
+ * @param req "/"
+ * @param res index ejs
+ */
 server.get('/', (req, res) => {
 	res.render('index.ejs', {
 		isAuth: req.isAuthenticated(),
 	});
 })
 
-//loginpage
-//isNOtAuth noch adden hier und für register
+
 server.get('/login', isNotAuth, (req, res) => {
 	res.render('loginpage.ejs',);
 })
@@ -70,25 +90,29 @@ server.post('/login', passport.authenticate('local', {
 }))
 
 
-//prefrencespage
+/**
+ * redirects to preference page
+ */
 server.get('/preferences', isAuth, (req, res) => {
 	res.render('preferences.ejs',{
 		isAuth: req.isAuthenticated(),
 	});
 })
 /**
- *
- * @param req
- * @param res
+ * redirects user to about us page
+ * @param req /about us is requested
+ * @param res about us page
  */
-//aboutuspage
+
 server.get('/aboutus', (req, res) => {
 	res.render('aboutus.ejs',{isAuth: req.isAuthenticated(),
 	})
 })
 
 
-//impressum
+/**
+ * redirects user to impressum
+ */
 server.get('/impressum', (req, res) => {
 	res.render('impressum.ejs',{
 		isAuth: req.isAuthenticated(),
@@ -96,7 +120,12 @@ server.get('/impressum', (req, res) => {
 })
 
 
-//projectpage
+
+/**
+ * if user is authenticated load projects view
+ * @param req {"/projects"} requests projects page
+ * @param res {isAuth}  authenticated
+ */
 server.get('/projects', isAuth, (req, res) => {
 	res.render('projects.ejs',{
 		isAuth: req.isAuthenticated(),
@@ -112,7 +141,12 @@ server.get('/projects', isAuth, (req, res) => {
 })
 
 
-//createprojectpage
+
+/**
+ * redirects user to create projects page if authenticated
+ * @param res{"/create"} user requests to see create project page
+ * @param req {isAuth}
+ */
 server.get('/create', isAuth, (req, res) => {
 	res.render('createproject.ejs',{
 		isAuth: req.isAuthenticated(),
@@ -120,13 +154,24 @@ server.get('/create', isAuth, (req, res) => {
 })
 
 
-//registerpage
+/**
+ * redirects user to registerpage
+ */
 server.get('/register', isNotAuth, (req, res) => {
 	res.render('registerpage.ejs',{
 		isAuth: req.isAuthenticated(),
 	});
 })
-
+/**
+ * passes User data of register form
+ * checks input validity and initiates error or valid input protocoll
+ * => redirects to pages after login or passes error messages
+ * @async
+ * @param id
+ * @param name
+ * @param username
+ *
+ */
 server.post('/register', async (req, res) => {
 	let id = Date.now().toString();
 	let firstname = req.body.firstname;
@@ -173,7 +218,11 @@ server.post('/register', async (req, res) => {
 })
 
 
-//lookup the current user for login inside json file and give out error message if password or username is wrong
+/**
+ * lookup the current user for login inside json file and
+ * give out error message if password or username is wrong
+  */
+
 async function validateLogin(username, password, done) {
 	const user = userdata.find(user => user.username === username);
 	if (user == null) {
@@ -200,7 +249,6 @@ async function validateLogin(username, password, done) {
 
 
 //Inititalize Userlogin
-//Umbedingt abändenr von der logik
 function initialize() {
 	var user = validateLogin
 	passport.use(new LocalStrategy({ usernameField: 'username' }, user))
@@ -211,8 +259,10 @@ function initialize() {
 }
 
 
-//checking if User is Authenticated
-//used for the case that the user isn't authenticated yet and if so making him unable to visit pages
+/**checking if User is Authenticated
+used for the case that the user isn't authenticated yet and if so making him unable to visit
+ */
+
 function isAuth(req, res, next) {
 	if (req.isAuthenticated()) {
 		return next()
