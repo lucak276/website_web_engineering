@@ -87,7 +87,7 @@ server.get('/login', isNotAuth, (req, res) => {
  * handles login with passport
  */
 server.post('/login', passport.authenticate('local', {
-	successRedirect: '/projects',
+	successRedirect: '/preferences',
 	failureRedirect: '/login',
 	failureFlash: true
 }))
@@ -206,7 +206,7 @@ server.post('/register', async (req, res) => {
 
 			console.log("Erfolgreich Account angelegt");
 			console.log(userdata);
-			res.redirect('/preferences')
+			res.redirect('/login')
 		} catch (error) {
 			console.log(error)
 			res.redirect('/register')
