@@ -55,16 +55,13 @@ console.log(`Server is running on http://${host}:${port}`);
 
 /**
  *call for initializing user
- *
- *  */
-
+ */
 initialize();
 
 /**
  * defines view engine as ejs
  */
 server.set('view-engine', 'ejs');
-
 
 
 /**
@@ -77,6 +74,7 @@ server.get('/', (req, res) => {
 		isAuth: req.isAuthenticated(),
 	});
 })
+
 
 /**
  * handles redirect to login (only accessable if user isn't autheitcated)
@@ -93,13 +91,6 @@ server.post('/login', passport.authenticate('local', {
 	failureRedirect: '/login',
 	failureFlash: true
 }))
-
-/**
- * 404 page redirect
- */
-server.get('*',(req, res) => {
-    res.sendFile(__dirname + '/views/404_page.html');
-})
 
 
 /**
@@ -131,21 +122,11 @@ server.get('/impressum', (req, res) => {
 	})
 })
 
-
-
 /**
  * if user is authenticated load projects view
  * @param req {"/projects"} requests projects page
  * @param res {isAuth}  authenticated
  */
-server.get('/projects', isAuth, (req, res) => {
-	res.render('projects.ejs',{
-		isAuth: req.isAuthenticated(),
-	})
-})
-
-
-//projectpage
 server.get('/projects', isAuth, (req, res) => {
 	res.render('projects.ejs',{
 		isAuth: req.isAuthenticated(),
@@ -296,4 +277,12 @@ function isNotAuth(req, res, next) {
 server.delete('/logout', (req, res) => {
 	req.logOut()
 	res.redirect('/')
+})
+
+
+/**
+ * 404 page redirect
+ */
+ server.get('*',(req, res) => {
+    res.sendFile(__dirname + '/views/404_page.html');
 })
