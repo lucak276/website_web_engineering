@@ -1,22 +1,20 @@
 /**
  * config for host and port. Default: http://localhost:3000
  */
-
 const host = 'localhost';
 const port = 3000;
 
 /**
  * for using environment variables
  */
-
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config()
 }
 
+
 /**
  * requirements
  */
-
 const express = require('express');
 const server = express();
 const path = require('path');
@@ -58,6 +56,7 @@ console.log(`Server is running on http://${host}:${port}`);
  */
 initialize();
 
+
 /**
  * defines view engine as ejs
  */
@@ -83,6 +82,7 @@ server.get('/login', isNotAuth, (req, res) => {
 	res.render('loginpage.ejs',);
 })
 
+
 /**
  * handles login with passport
  */
@@ -97,18 +97,20 @@ server.post('/login', passport.authenticate('local', {
  * redirects to preference page
  */
 server.get('/preferences', isAuth, (req, res) => {
-	res.render('preferences.ejs',{
+	res.render('preferences.ejs', {
 		isAuth: req.isAuthenticated(),
 	});
 })
+
+
 /**
  * redirects user to about us page
  * @param req /about us is requested
  * @param res about us page
  */
-
 server.get('/aboutus', (req, res) => {
-	res.render('aboutus.ejs',{isAuth: req.isAuthenticated(),
+	res.render('aboutus.ejs', {
+		isAuth: req.isAuthenticated(),
 	})
 })
 
@@ -117,10 +119,11 @@ server.get('/aboutus', (req, res) => {
  * redirects user to impressum
  */
 server.get('/impressum', (req, res) => {
-	res.render('impressum.ejs',{
+	res.render('impressum.ejs', {
 		isAuth: req.isAuthenticated(),
 	})
 })
+
 
 /**
  * if user is authenticated load projects view
@@ -128,11 +131,10 @@ server.get('/impressum', (req, res) => {
  * @param res {isAuth}  authenticated
  */
 server.get('/projects', isAuth, (req, res) => {
-	res.render('projects.ejs',{
+	res.render('projects.ejs', {
 		isAuth: req.isAuthenticated(),
 	})
 })
-
 
 
 /**
@@ -141,7 +143,7 @@ server.get('/projects', isAuth, (req, res) => {
  * @param req {isAuth}
  */
 server.get('/create', isAuth, (req, res) => {
-	res.render('createproject.ejs',{
+	res.render('createproject.ejs', {
 		isAuth: req.isAuthenticated(),
 	})
 })
@@ -151,10 +153,12 @@ server.get('/create', isAuth, (req, res) => {
  * redirects user to registerpage
  */
 server.get('/register', isNotAuth, (req, res) => {
-	res.render('registerpage.ejs',{
+	res.render('registerpage.ejs', {
 		isAuth: req.isAuthenticated(),
 	});
 })
+
+
 /**
  * passes User data of register form
  * checks input validity and initiates error or valid input protocoll
@@ -180,14 +184,14 @@ server.post('/register', async (req, res) => {
 			errorMessage: 'Sie müssen die Nutzungsbedingungen akzeptieren'
 		});
 	}
-	else{
+	else {
 		try {
 			if (user != null) {
 				return res.render("registerpage.ejs", {
 					errorMessage: 'Ein Nutzer mit diesem Usernamen existiert bereits'
 				});
 			}
-			else {val_username = username}
+			else { val_username = username }
 
 			userdata.push({
 				firstname: firstname,
@@ -215,7 +219,6 @@ server.post('/register', async (req, res) => {
  * lookup the current user for login inside json file and
  * give out error message if password or username is wrong
   */
-
 async function validateLogin(username, password, done) {
 	const user = userdata.find(user => user.username === username);
 	if (user == null) {
@@ -255,7 +258,6 @@ function initialize() {
 /**checking if User is Authenticated
 used for the case that the user isn't authenticated yet and if so making him unable to visit
  */
-
 function isAuth(req, res, next) {
 	if (req.isAuthenticated()) {
 		return next()
@@ -283,6 +285,6 @@ server.delete('/logout', (req, res) => {
 /**
  * 404 page redirect
  */
- server.get('*',(req, res) => {
-    res.sendFile(__dirname + '/views/404_page.html');
+server.get('*', (req, res) => {
+	res.sendFile(__dirname + '/views/404_page.html');
 })
