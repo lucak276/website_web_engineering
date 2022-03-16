@@ -204,9 +204,7 @@ server.post('/register', async (req, res) => {
 					password: bcryptpassword,
 					id: id,
 				})
-	
 				fs.writeFileSync('./userdata.json', JSON.stringify(userdata, null, 2));
-	
 				console.log("Erfolgreich Account angelegt");
 				console.log(userdata);
 				res.redirect('/login')

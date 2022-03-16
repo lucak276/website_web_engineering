@@ -1,9 +1,23 @@
 [
-{
+  {
     "gender": "male",
     "username": "weltitob",
     "password": "$2b$10$m2Pu2nAca.SaIAgnznqn4.qUGESczi6cE8vhKkydD/TuRw5gDc9dK",
     "email": "weltitob@gmail.com",
     "id": "1646753422191"
-}
+  },
+  {
+    "email": "schmitz.thomas123@gmail.com",
+    "gender": "male",
+    "username": "Chewbacha12",
+    "password": "$2b$10$c5BGT/nHRGU85Pd5xsMavOLp8EdQuAM7R/Qrvc1FWSdQurtduGHiW",
+    "id": "1647344683608"
+  },
+  {
+    "email": "contact.cyphernexus@gmail.de",
+    "gender": "male",
+    "username": "Cyphermonke",
+    "password": "$2b$10$rtNWI0hP76hujlC/.Ij7Wu2th1Vmnw42iIUStCKlbhSr0yfqJegQ2",
+    "id": "1647415556532"
+  }
 ]
